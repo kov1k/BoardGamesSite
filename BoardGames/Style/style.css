@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    min-width: 1440px;
+    max-width: 1440px;
+    background-color: antiquewhite;
+}
+.header_wrapper{
+    width: 100%;
+    max-width: 1440px;
+    min-width: 1200px;
+}
