@@ -1,27 +1,68 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style/style.css" type="text/css">
+        <link rel="stylesheet" href="../Style/style.css" type="text/css">
         <title>Board_Games</title>
     </head>
     <body>
-        <header class="header_wrapper">
-               <div class="header">
-                    <div class="header_flex-box">
-                        <div class="header_logo"></div>
-                        <div class="header_nav">
-                            <ul class="nav_ulist">
-                                <li class="nav_list"></li>
-                                <li class="nav_list"></li>
-                                <li class="nav_list"></li>
-                                <li class="nav_list"></li>
-                                <li class="nav_list"></li>
-                                <li class="nav_list"></li>
-                            </ul>
+        <div class="container">
+            <header class="header_container">
+                <div class="header">
+                    <div class="header__top">
+                        <div class="header_wrapper">
+                            <div class="header_layout-box header_layout--top">
+                                <div class="header_logo header__column--left">
+                                    <a class="logo_link" href="#">
+                                        <img alt="BoardGamesShop" src="../Assets/logo.png" height="80px" width="80px">
+                                    </a>
+                                    <span class="logo_title">BGStore</span>
+                                </div>
+                                <div class="header_row header__column--middle">
+                                    
+                                        <form action="#" class="preview-search-field">
+                                            <input type="text" class="search_input" placeholder="пошук товарів" autocomplete="off" value>
+                                            <button type="submit" class="search_button" disabled></button>  
+                                        </form>
+                                    
+                                </div>
+                                <div class="header_contacts header__column--right">
+                                    <div class="header__section header__section--contacts">099 999 9999</div>
+                                    <div class="header__section"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="header_login"></div>
                     </div>
-               </div>
-        </header>
+                    
+                    <div class="header__bottom">
+                        <div class="header_wrapper">
+                            <div class="header_layout-box"></div>
+                        </div>
+                    </div>
+                    <!--<div class="header_flex-box">
+                            <div class="header_d-flex_logo">
+                                <img src="../Assets/logo.png" class="header_logo" alt="Лого настільних ігор">
+                                <p class="header_logo-text">BGS</p>
+                            </div> 
+                            <div class="header_nav">
+                                <ul class="nav_ulist">
+                                    <li class="nav_list"></li>
+                                    <li class="nav_list"></li>
+                                    <li class="nav_list"></li>
+                                    <li class="nav_list"></li>
+                                    <li class="nav_list"></li>
+                                    <li class="nav_list"></li>
+                                </ul>
+                            </div>
+                            <div class="header_login"></div>
+                        </div>
+                    -->
+                </div>
+            </header>
+            <main class="">
+                <div class="main_wrapper">
+
+                </div>
+            </main>
+        </div>
     </body>
 </html>
