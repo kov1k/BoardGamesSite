@@ -1,8 +1,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../Style/style.css" type="text/css">
-        <title>Board_Games</title>
+        <title>BGS</title>
     </head>
     <body>
         <div class="container">
@@ -18,23 +19,25 @@
                                     <span class="logo_title">BGStore</span>
                                 </div>
                                 <div class="header_row header__column--middle">
-                                    
                                         <form action="#" class="preview-search-field">
-                                            <input type="text" class="search_input" placeholder="пошук товарів" autocomplete="off" value>
-                                            <button type="submit" class="search_button">Search</button>  
+                                            <input type="text" class="search search_input" placeholder="пошук товарів" autocomplete="off" value>
+                                            <button type="submit" class="search search_button" disabled>
+                                                <img src="../Assets/icon-search.svg" alt="search" class="search search_icon">
+                                            </button>  
                                         </form>
                                     
                                 </div>
                                 <div class="header_contacts header__column--right">
                                     <div class="header__section">
-                                        
                                         <div class="dropdown_list">
                                             <button class="dropbtn header__section--contacts">Наші контакти</button>
-                                            <div class="dropdown_content">
-                                                <span class="dropdown-item">0239999</span>
-                                                <span class="dropdown-item">098 999 9999</span>
-                                            </div>    
-                                        </div>
+                                                <div class="dropdown_content">
+                                                    <div class="dropdown_flex">
+                                                        <span class="dropdown-item">098 999 99-99</span>
+                                                        <span class="dropdown-item">098 999 99-99</span>
+                                                    </div>
+                                                </div> 
+                                        </div>      
                                     </div>
                                     <div class="header__section">
                                         <div class="basket__section">
@@ -46,11 +49,18 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="header__bottom">
                         <div class="header_wrapper">
-                            <div class="header_layout-box"></div>
-                        </div>
+                            <div class="header_layout-grid">
+                                <div class="section_container">
+                                    <a href="#" class="item_link"><div class="section_item item">Стратегії</div></a>
+                                    <a href="#" class="item_link"><div class="section_item item">Карткові</div></a>
+                                    <a href="#" class="item_link"><div class="section_item item">Логічні</div></a>
+                                    <a href="#" class="item_link"><div class="section_item item">Рольові</div></a>
+                                    <a href="#" class="item_link"><div class="section_item item">Квести</div></a>
+                                </div>
+                            </div>
+                        </div>      
                     </div>
                 </div>
             </header>
