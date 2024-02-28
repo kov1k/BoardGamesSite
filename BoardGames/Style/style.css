@@ -18,6 +18,7 @@ a{
 }
 form{
     display: block;
+    margin-block-end: 0;
 }
 .container{
     display: flex;
@@ -32,7 +33,9 @@ form{
     background-color: aquamarine;
 }
 .header_wrapper{
+    width: 100%;
     max-width: 1440px;
+    min-width: 1000px;
     padding: 0 30px;
     margin: 0 auto;
 }
@@ -41,7 +44,6 @@ form{
     padding: 7px 0;
     background: rgb(255, 255, 255);
     font-size: 12px;
-    
 }
 .header__column{
     display:flex;
@@ -49,17 +51,24 @@ form{
     flex: 1 1 auto;
     max-width: 100%;
 }
-.header__column--left{
-    padding-right: 20px;
+.header__column--middle{
+    width: 35%;
 }
 .header_layout--top{
     height:100px
 }
+.header__column--right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 .header_layout-box{
+    width: 100%;
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .header_logo{
     display: flex;
@@ -67,10 +76,10 @@ form{
     min-width: 60px;
 }
 .logo_title{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 36px;
     font-weight: 600;
     font-style: italic;
+    text-shadow: 3px 2px 2px rgb(182, 182, 182);
 }
 .search_input{
     box-sizing: border-box;
@@ -80,4 +89,48 @@ form{
     border: 1px solid #d0d0d0;
     border-radius: 4px;
     color: #000;
+}
+.preview-search-field{
+    display: flex;
+    gap:2px;
+}
+.basket__section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.basket__section img{
+    width: 60px;
+    height: 60px;
+}
+.header__section--contacts{
+    font-size: 18px;
+}
+/* Выпадающий список */
+.dropbtn{
+    color: black;
+    border: none;
+    cursor: pointer;
+    background: none;
+    font-weight: 600;
+}
+.dropdown_list{
+    position: relative;
+    display: inline-block;
+}
+.dropdown_content{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    padding: 8px 12px;
+}
+.dropdown-item{
+    color: black;
+}
+.dropdown_list:hover .dropdown_content{
+    display: block;
 }
