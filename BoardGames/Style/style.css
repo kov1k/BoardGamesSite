@@ -226,7 +226,22 @@ button{
     transition: all .3s;
 }
 @media only screen and (max-width:1280px) {
-    /* .header__column--middle{
+    .header__column--middle{
         width: 35%;
-    } */
+        color: green;
+    }
 }
+/* Удалить потом */
+.main_wrapper{
+    display:flex;
+    justify-content: center;
+}
+#video{
+    margin: 2em auto;
+    width: 50%;
+    height: 75%;
+}
+table, th, td {
+    margin: 2em auto;
+    border:1px solid black;
+  }
