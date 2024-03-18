@@ -52,21 +52,342 @@
                     <div class="header__bottom">
                         <div class="header_wrapper">
                             <div class="header_layout-grid">
-                                <div class="section_container">
-                                    <a href="./boardGames.html" class="item_link"><div class="section_item item">Настільні ігри</div></a>
+                                <nav class="header_section-container">
+                                    <a href="./index.html" class="item_link"><div class="section_item item">Настільні ігри</div></a>
                                     <a href="./puzzles.html" class="item_link"><div class="section_item item">Пазли</div></a>
                                     <a href="./gameSeries.html" class="item_link"><div class="section_item item">Серії ігор</div></a>
                                     <a href="./comics.html" class="item_link"><div class="section_item item">Комікси та книги</div></a>
                                     <a href="./accessories.html" class="item_link"><div class="section_item item">Аксесуари</div></a>
-                                </div>
+                                </nav>
                             </div>
                         </div>      
                     </div>
                 </div>
             </header>
-            <main class="">
+            <main id="main" class="main">
                 <div class="main_wrapper">
-                    
+                    <div class="catalog">
+                        <div class="catalog_top__flex">
+                            <div class="catalog_top catalog_top--left">
+                                <h1 class="main_h">Настільні ігри</h1>
+                            </div>
+                            <div class="catalog_top catalog_top--right">
+                                <div class="catalog_sort">
+                                    <div class="catalog_sort__title">Сортування:</div>
+                                    <div class="catalog_sort__list">
+                                        <button class="catalog_sort__item catalog_sort_button" role="button">за назвою</button>
+                                        <button class="catalog_sort__item catalog_sort_button" role="button">спочатку дешеве</button>
+                                        <button class="catalog_sort__item catalog_sort_button" role="button">спочатку дорожче</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog_middle">
+                            <div class="section_container">
+                                <section class="filter_container">
+                                    <div class="filter_flex">
+                                        <div class="filter_box filter_price">
+                                            <div class="filter_section_h">Ціна, грн</div>
+                                            <div class="filter_section_price-range">
+                                                <div class="filter_section_inputs">
+                                                    <input type="number" class="price-placeholder" value="0" min="0" max="4260" id="price-start">
+                                                    <i class="filter-price-sep"></i>
+                                                    <input type="number" class="price-placeholder" value="4260" min="1" max="4260" id="price-end">
+                                                    <button type="submit" class="btn" type="submit">
+                                                        <span class="btn-content">OK</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="filter_section_price-slidebar"></div>
+                                        </div>
+                                        <div class="filter_box filter_available"></div>
+                                        <div class="filter_box filter_count-of-players"></div>
+                                        <div class="filter_box filter_difficulty"></div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="catalog_container">
+                                <ul class="catalog_grid">
+                                    <li class="catalog_grid__item">
+                                        <div class="catalog__item-flex">
+                                            <div class="catalog__item-view">
+                                                <div class="catalog__item-card-img">
+                                                    <img class="catalog_item-picture" src="../Assets/witcher.webp" alt="the-witcher-old-world"></img>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__item-info">
+                                                <div class="catalog__item-title">
+                                                    <a class="catalog__item-title-link" href="#" title="Відьмак. Старий світ (The Witcher: Old World)">
+                                                        Відьмак. Старий світ (The Witcher: Old World)
+                                                    </a>
+                                                </div>
+                                                <div class="catalog__item-price_button">
+                                                    <div class="catalog__item-price">2680 грн</div>
+                                                    <button class="catalog__item-buy-button">
+                                                        <div class="catalog__item">Купити</div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="catalog_grid__item">
+                                        <div class="catalog__item-flex">
+                                            <div class="catalog__item-view">
+                                                <div class="catalog__item-card-img">
+                                                    <img class="catalog_item-picture" src="../Assets/serif.webp" alt="serif-of-nottingham"></img>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__item-info">
+                                                    <div class="catalog__item-title">
+                                                        <a class="catalog__item-title-link" href="#" title="Шериф Ноттінгема (Sheriff of Nottingham)">
+                                                        Шериф Ноттінгема (Sheriff of Nottingham)
+                                                    </a>
+                                                </div>
+                                                <div class="catalog__item-price_button">
+                                                    <div class="catalog__item-price">1710 грн</div>
+                                                    <button class="catalog__item-buy-button">
+                                                        <div class="catalog__item">Купити</div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="catalog_grid__item">
+                                        <div class="catalog__item-flex">
+                                            <div class="catalog__item-view">
+                                                <div class="catalog__item-card-img">
+                                                    <img class="catalog_item-picture" src="../Assets/high-society.webp" alt="high-society"></img>
+                                                </div>
+                                            </div>
+                                                <div class="catalog__item-info">
+                                                    <div class="catalog__item-title">
+                                                    <a class="catalog__item-title-link" href="#" title="Вище суспільство (High Society)">
+                                                        Вище суспільство (High Society)
+                                                    </a>
+                                                </div>
+                                                <div class="catalog__item-price_button">
+                                                    <div class="catalog__item-price">480 грн</div>
+                                                    <button class="catalog__item-buy-button">
+                                                        <div class="catalog__item">Купити</div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="catalog_grid__item">
+                                        <div class="catalog__item-flex">
+                                            <div class="catalog__item-view">
+                                            <div class="catalog__item-card-img">
+                                                <img class="catalog_item-picture" src="../Assets/game-of-thrones.webp" alt="A-Game-of-Thrones-The-Board-Game-Second-Edition"></img>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__item-info">
+                                                <div class="catalog__item-title">
+                                                    <a class="catalog__item-title-link" href="#" title="Гра престолів. Друге видання (A Game of Thrones: The Board Game Second Edition)">
+                                                        Гра престолів. Друге видання (A Game of Thrones: The Board Game Second Edition)
+                                                    </a>
+                                                </div>
+                                                <div class="catalog__item-price_button">
+                                                    <div class="catalog__item-price">2600 грн</div>
+                                                    <button class="catalog__item-buy-button">
+                                                        <div class="catalog__item">Купити</div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="catalog_grid__item">
+                                        <div class="catalog__item-flex">
+                                            <div class="catalog__item-view">
+                                                <div class="catalog__item-card-img">
+                                                    <img class="catalog_item-picture" src="../Assets/nidavellir.webp" alt="Nidavellir"></img>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__item-info">
+                                                <div class="catalog__item-title">
+                                                    <a class="catalog__item-title-link" href="#" title="Нідавеллір (Nidavellir)">
+                                                        Нідавеллір (Nidavellir)
+                                                    </a>
+                                                </div>
+                                                <div class="catalog__item-price_button">
+                                                    <div class="catalog__item-price">1520 грн</div>
+                                                    <button class="catalog__item-buy-button">
+                                                        <div class="catalog__item">Купити</div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="catalog_grid__item">
+                                        <div class="catalog__item-flex">
+                                            <div class="catalog__item-view">
+                                                <div class="catalog__item-card-img">
+                                                    <img class="catalog_item-picture" src="../Assets/terraforming-mars.webp" alt="serif"></img>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__item-info">
+                                                <div class="catalog__item-title">
+                                                    <a class="catalog__item-title-link" href="#" title="Тераформування Марса (Terraforming Mars)">
+                                                        Тераформування Марса (Terraforming Mars)
+                                                    </a>
+                                                </div>
+                                                <div class="catalog__item-price_button">
+                                                    <div class="catalog__item-price">2450 грн</div>
+                                                    <button class="catalog__item-buy-button">
+                                                        <div class="catalog__item">Купити</div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="catalog_grid__item">
+                                        <div class="catalog__item-flex">
+                                            <div class="catalog__item-view">
+                                                <div class="catalog__item-card-img">
+                                                    <img class="catalog_item-picture" src="../Assets/veliki-spodivannya.webp" alt="serif"></img>
+                                                </div>
+                                            </div>
+                                            <div class="catalog__item-info">
+                                                <div class="catalog__item-title">
+                                                    <a class="catalog__item-title-link" href="#" title="Nanty Narking. Великі сподівання">
+                                                        Nanty Narking. Великі сподівання
+                                                    </a>
+                                                </div>
+                                                <div class="catalog__item-price_button">
+                                                    <div class="catalog__item-price">1550 грн</div>
+                                                    <button class="catalog__item-buy-button">
+                                                        <div class="catalog__item">Купити</div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="catalog_grid__item">
+                                        <div class="catalog__item-flex">
+                                            <div class="catalog__item-view">
+                                                <div class="catalog__item-card-img">
+                                                    <img class="catalog_item-picture" src="../Assets/wonderful-world.webp" alt="It-is-a-Wonderful-World)">
+                                                </div>
+                                            </div>
+                                            <div class="catalog__item-info">
+                                                <div class="catalog__item-title">
+                                                    <a class="catalog__item-title-link" href="#" title="Цей дивовижний світ (It's a Wonderful World)">
+                                                        Цей дивовижний світ (It's a Wonderful World)
+                                                    </a>
+                                                </div>
+                                                <div class="catalog__item-price_button">
+                                                    <div class="catalog__item-price">1800 грн</div>
+                                                    <button class="catalog__item-buy-button">
+                                                        <div class="catalog__item">Купити</div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="catalog_grid__item">
+                                        <div class="catalog__item-flex">
+                                            <div class="catalog__item-view">
+                                                <div class="catalog__item-card-img">
+                                                    <img class="catalog_item-picture" src="../Assets/wonderlands-war.webp" alt="Wonderland's-War)">
+                                                </div>
+                                            </div>
+                                            <div class="catalog__item-info">
+                                                <div class="catalog__item-title">
+                                                    <a class="catalog__item-title-link" href="#" title="Битва за Дивокрай (Wonderland's War)">
+                                                        Битва за Дивокрай (Wonderland's War)
+                                                    </a>
+                                                </div>
+                                                <div class="catalog__item-price_button">
+                                                    <div class="catalog__item-price">2999 грн</div>
+                                                    <button class="catalog__item-buy-button">
+                                                        <div class="catalog__item">Купити</div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="catalog_grid__item">
+                                        <div class="catalog__item-flex">
+                                            <div class="catalog__item-view">
+                                                <div class="catalog__item-card-img">
+                                                    <img class="catalog_item-picture" src="../Assets/lord-of-the-rings.webp" alt="lord-of-the-rings">
+                                                </div>
+                                            </div>
+                                            <div class="catalog__item-info">
+                                                <div class="catalog__item-title">
+                                                    <a class="catalog__item-title-link" href="#" title="Володар Перснів. Пригоди в Середзем'ї (The Lord of the Rings: Journeys in Middle-Earth)">
+                                                        Володар Перснів. Пригоди в Середзем'ї (The Lord of the Rings: Journeys in Middle-Earth)
+                                                    </a>
+                                                </div>
+                                                <div class="catalog__item-price_button">
+                                                    <div class="catalog__item-price">4250 грн</div>
+                                                    <button class="catalog__item-buy-button">
+                                                        <div class="catalog__item">Купити</div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="catalog_grid__item">
+                                        <div class="catalog__item-flex">
+                                            <div class="catalog__item-view">
+                                                <div class="catalog__item-card-img">
+                                                    <img class="catalog_item-picture" src="../Assets/novyi-kovcheh.webp" alt="novyi-kovcheh">
+                                                </div>
+                                            </div>
+                                            <div class="catalog__item-info">
+                                                <div class="catalog__item-title">
+                                                    <a class="catalog__item-title-link" href="#" title="Новий ковчег (Ark Nova)">
+                                                        Новий ковчег (Ark Nova)
+                                                    </a>
+                                                </div>
+                                                <div class="catalog__item-price_button">
+                                                    <div class="catalog__item-price">3150 грн</div>
+                                                    <button class="catalog__item-buy-button">
+                                                        <div class="catalog__item">Купити</div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="catalog_grid__item">
+                                        <div class="catalog__item-flex">
+                                            <div class="catalog__item-view">
+                                                <div class="catalog__item-card-img">
+                                                    <img class="catalog_item-picture" src="../Assets/star-wars.webp" alt="star-wars">
+                                                </div>
+                                            </div>
+                                            <div class="catalog__item-info">
+                                                <div class="catalog__item-title">
+                                                    <a class="catalog__item-title-link" href="#" title="Star Wars. Зовнішнє кільце (Star Wars Outer Rim)">
+                                                        Star Wars. Зовнішнє кільце (Star Wars Outer Rim)
+                                                    </a>
+                                                </div>
+                                                <div class="catalog__item-price_button">
+                                                    <div class="catalog__item-price">3575 грн</div>
+                                                    <button class="catalog__item-buy-button">
+                                                        <div class="catalog__item">Купити</div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
