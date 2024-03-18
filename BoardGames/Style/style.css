@@ -2,11 +2,13 @@
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
 }
-
+:root{
+    --btn-background-color:rgba(199, 199, 199, 0.05);
+    --orange: rgb(255, 105, 3);
+}
 html {
     scroll-behavior: smooth;
 }
-
 body {
     margin: 0 auto;
     position: relative;
@@ -31,6 +33,14 @@ h2,
 h3,
 h4,
 h5{
+    margin: 0;
+}
+span{
+    color:#333;
+}
+li, ul{
+    list-style-type: none;
+    padding: 0;
     margin: 0;
 }
 .container{
@@ -104,8 +114,9 @@ h5{
     width: 100%;
     height: 30px;
     padding: 0 36px 0 12px;
-    border: 1px solid #d0d0d0;
-    border-radius: 4px;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px 0 0 4px;
+    border-right: none;
     color: #000;
     outline: none;
 }
@@ -119,7 +130,8 @@ h5{
 }
 .search_button{
     border: 1px solid;
-    border-radius: 5px;
+    border-radius: 0 5px 5px 0;
+    border-left: none;
 }
 .basket__section{
     display: flex;
@@ -150,6 +162,12 @@ h5{
     font-weight: 600;
     padding: 4.5px 8px;
     width: 157px;
+}
+.btn{
+    position: relative;
+    background: var(--btn-background-color);
+    border: 1px solid;
+    border-radius: 2px;
 }
 .dropdown_list{
     position: relative;
@@ -198,7 +216,7 @@ h5{
     background-color: #292932;
 }
 
-.section_container{
+.header_section-container{
     display: grid;
     grid-template-columns: repeat(5, minmax(150px,1fr));
     grid-template-rows: 40px;
@@ -289,6 +307,8 @@ h5{
     padding: 4px;
     border-radius: 2px;
     border-right: 1px solid rgba(199, 199, 199, 0.205);
+    color:#333;
+    font-size: 16px;
 }
 .catalog_sort__item:first-child{
     background: #eee;
@@ -304,3 +324,135 @@ h5{
     cursor:default;
 }
 /* End JS */
+.catalog_middle{
+    display: grid;
+    grid-template-columns: 220px 1fr
+    /* align-items: start; */
+}
+.filter_flex{
+    display: flex;
+    flex-direction: column;
+
+}
+.filter_section_h{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.price-placeholder{
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.15);
+    padding: 0 6px;
+    height: 26px;
+    font-size: 14px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.filter_section_inputs{
+    display: flex;
+}
+.filter_section_inputs .btn{
+    height: 26px;
+    border: 1px solid rgba(0,0,0,0.15);
+    padding: 0 6px;
+    margin-left: 10px;
+}
+.filter-price-sep {
+    flex-shrink: 0;
+    width: 12px;
+    height: 1px;
+    margin: 11px 2px 0;
+    background-color: #acacac;
+}
+
+
+/* Catalog items */
+
+
+.catalog_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+    grid-template-rows: repeat(3, 350px);
+    gap: 12px;
+}
+.catalog__item-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #cdcdcd;
+    height: 100%;
+    justify-content: space-between;
+}
+.catalog__item-card-img{
+    margin-bottom: 15px;
+    padding: 15px 15px 0;
+}
+.catalog_item-picture{
+    width: 100%;
+    max-width: 100%; 
+    height: auto; 
+}
+.catalog__item-info{
+    padding: 0 10px 5px;
+}
+.catalog__item-title{
+    width: 220px;
+    overflow: hidden;
+    font-weight: normal;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    height: 2.4em;
+    margin: 0 0 5px;
+}
+.catalog__item-title-link{
+    color: #333;
+}
+.catalog__item-title-link:hover{
+    color: var(--orange);
+    transition: 0.1s;
+}
+.catalog__item-price_button{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.catalog__item-price{
+    font-size: 20px;
+    font-weight: bold;
+}
+.catalog__item-buy-button{
+    background: var(--orange);
+    border-radius: 4px;
+    padding: 2px 7px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.catalog__item-flex {
+    position: relative; /* Добавляем позиционирование, чтобы дочерний элемент мог быть относительно этого */
+}
+.catalog__item-flex::before {
+    content: ''; /* Добавляем псевдоэлемент, который будет служить фоном для рамки */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent; /* Устанавливаем прозрачную рамку */
+    pointer-events: none; /* Позволяем указателю проходить через этот элемент */
+    transition: border-color 0.3s; /* Добавляем плавный переход цвета рамки */
+}
+
+.catalog__item-flex:hover::before {
+    border-color: black; /* Устанавливаем цвет рамки при наведении */
+}
