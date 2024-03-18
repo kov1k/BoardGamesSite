@@ -5,6 +5,8 @@
 :root{
     --btn-background-color:rgba(199, 199, 199, 0.05);
     --orange: rgb(255, 105, 3);
+    --orange-dark: rgba(255, 104, 3, 0.897);
+    --orange-active: #ffb370;
 }
 html {
     scroll-behavior: smooth;
@@ -240,7 +242,7 @@ li, ul{
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: rgb(255, 105, 3);
+    background-color: var(--orange);
     color: white;
     transition: all .1s;
     font-size: 18px;
@@ -248,10 +250,10 @@ li, ul{
     letter-spacing: 0.6px;
 }
 .item_link:active{
-    color: #ffb370;
+    color: var(--orange-active)
 }
 .item_link:hover{
-    background-color: rgba(255, 104, 3, 0.897);
+    background-color: var(--orange-dark); 
     transition: all .3s;
 }
 @media only screen and (max-width:1280px) {
@@ -315,7 +317,7 @@ li, ul{
     color: #000;
 }
 .catalog_sort__item:hover{
-    color: rgb(255, 105, 3);
+    color: var(--orange);
     cursor: pointer;
 }
 .catalog_sort__item:first-child:hover{
@@ -436,23 +438,31 @@ input::-webkit-inner-spin-button {
     color: white;
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s;
 }
-
+.catalog__item-buy-button:hover{
+    background-color: var(--orange-dark);
+}
+.catalog__item-buy-button:active{
+    color: var(--orange-active);
+    transition: 0.1s;
+}
 .catalog__item-flex {
-    position: relative; /* Добавляем позиционирование, чтобы дочерний элемент мог быть относительно этого */
+    position: relative; 
 }
 .catalog__item-flex::before {
-    content: ''; /* Добавляем псевдоэлемент, который будет служить фоном для рамки */
+    content: ''; 
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    border: 2px solid transparent; /* Устанавливаем прозрачную рамку */
-    pointer-events: none; /* Позволяем указателю проходить через этот элемент */
-    transition: border-color 0.3s; /* Добавляем плавный переход цвета рамки */
+    border: 2px solid transparent;
+    pointer-events: none; 
+    transition: border-color 0.3s; 
 }
 
 .catalog__item-flex:hover::before {
-    border-color: black; /* Устанавливаем цвет рамки при наведении */
+    border-color: black; 
 }
