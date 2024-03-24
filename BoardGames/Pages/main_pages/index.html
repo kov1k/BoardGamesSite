@@ -88,7 +88,7 @@
                             <div class="section_container">
                                 <section class="filter_container">
                                     <div class="filter_flex">
-                                        <div class="filter_box filter_price">
+                                        <form class="filter_box filter_price">
                                             <div class="filter_section_h">Ціна, грн</div>
                                             <div class="filter_section_price-range">
                                                 <div class="filter_section_inputs">
@@ -100,18 +100,151 @@
                                                     </button>
                                                 </div>
                                             </div>
-                                            <div class="filter_section_price-slidebar"></div>
-                                        </div>
+                                            <div class="filter_section_price-slidebar">
+                                                <div class="slidebar-range"></div>
+                                                <span class="slidebar-handle" style="left:0%"></span>
+                                                <span class="slidebar-handle" style="left:100%"></span>
+                                            </div>
+                                        </form>
                                         <div class="filter_box filter_lang">
                                             <div class="filter_section_h">Мова</div>
-                                                <div class="filter_section"></div>
+                                                <div class="filter_list">
+                                                    <ul class="ul_filter">
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Українська
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Англійська
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Російська
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                         </div>
                                         <div class="filter_box filter_available">
                                             <div class="filter_section_h">Наявність</div>
-                                                <div class="filter_section"></div>
+                                                <div class="filter_list">
+                                                    <ul class="ul_filter">
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                В наявності
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Немає в наявності
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Новинка
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Зі знижкою
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Передзамовлення
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                         </div>
-                                        <div class="filter_box filter_count-of-players"></div>
-                                        <div class="filter_box filter_difficulty"></div>
+                                        <div class="filter_box filter_count-of-players">
+                                            <div class="filter_section_h">Кількість гравців</div>
+                                            <div class="filter_list">
+                                                    <ul class="ul_filter">
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                1
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                2
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                3
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                4
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Понад 4
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                        <div class="filter_box filter_difficulty">
+                                            <div class="filter_section_h">Складність</div>
+                                            <div class="filter_list">
+                                                    <ul class="ul_filter">
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Низька
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Середня
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Висока
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                        </div>
                                     </div>
                                 </section>
                             </div>
