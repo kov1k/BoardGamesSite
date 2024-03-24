@@ -100,9 +100,6 @@ li, ul{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .header_logo{
-    display: flex;
-    align-items: center;
-    min-width: 60px;
     padding-right: 20px;
 }
 .logo_title{
@@ -143,9 +140,19 @@ li, ul{
     font-size: 20px;
     font-weight: 600;
 }
+.logo_link{
+    display: flex;
+    align-items: center;
+}
 .basket__section img{
-    width: 60px;
-    height: 60px;
+    width: 45px;
+}
+.basket__section_button{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
 }
 .header__section--contacts{
     font-size: 20px;
@@ -334,7 +341,7 @@ li, ul{
 .filter_flex{
     display: flex;
     flex-direction: column;
-
+    gap: 20px;
 }
 .filter_section_h{
     font-size: 20px;
