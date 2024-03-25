@@ -1,537 +1,549 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../Style/style.css" type="text/css">
-        <title>BGS</title>
-    </head>
-    <body>
-        <div class="container">
-            <header class="header_container">
-                <div class="header">
-                    <div class="header__top">
-                        <div class="header_wrapper">
-                            <div class="header_layout-box header_layout--top">
-                                <div class="header_logo header__column--left">
-                                    <a class="logo_link" href="#">
-                                        <img alt="BoardGamesShop" src="../../Assets/assets_common/logo.png" height="80px" width="80px">
-                                        <span class="logo_title">BGStore</span>
-                                    </a>
-                                </div>
-                                <div class="header_row header__column--middle">
-                                        <form action="#" class="preview-search-field">
-                                            <input type="text" class="search search_input" placeholder="пошук товарів" autocomplete="off" value>
-                                            <button type="submit" class="search search_button" disabled>
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Style/style.css" type="text/css">
+    <title>BGS</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header_container">
+            <div class="header">
+                <div class="header__top">
+                    <div class="header_wrapper">
+                        <div class="header_layout-box header_layout--top">
+                            <div class="header_logo header__column--left">
+                                <a class="logo_link" href="#">
+                                    <img alt="BoardGamesShop" src="../../Assets/assets_common/logo.png">
+                                    <span class="logo_title">BGStore</span>
+                                </a>
+                            </div>
+                            <div class="header_row header__column--middle">
+                                <form action="#" class="preview-search-field">
+                                    <input type="text" data-lang-key="goods" class="search search_input" placeholder="пошук товарів" autocomplete="off" value>
+                                    <button type="submit" class="search search_button" disabled>
                                                 <img src="../../Assets/assets_common/icon-search.svg" alt="search" class="search search_icon">
-                                            </button>  
-                                        </form>
-                                    
-                                </div>
-                                <div class="header_contacts header__column--right">
-                                    <div class="header__section">
-                                        <div class="dropdown_list">
-                                            <button class="dropbtn header__section--contacts">Наші контакти</button>
-                                                <div class="dropdown_content">
-                                                    <div class="dropdown_flex">
-                                                        <span class="dropdown-item">098 999 99-99</span>
-                                                        <span class="dropdown-item">098 999 99-99</span>
-                                                    </div>
-                                                </div> 
-                                        </div>      
-                                    </div>
-                                    <div class="header__section">
-                                        <div class="basket__section">
-                                            <button class="basket__section_button">
-                                                <img src="../../Assets/assets_common/basket.svg" alt="basket">
-                                                <span class="basket__font">Мій кошик</span>
                                             </button>
+                                </form>
+
+                            </div>
+                            <div class="header_contacts header__column--right">
+                                <div class="header__section">
+                                    <div class="dropdown_list">
+                                        <button data-lang-key="contacts" class="dropbtn header__section--contacts">Наші контакти</button>
+                                        <div class="dropdown_content">
+                                            <div class="dropdown_flex">
+                                                <span class="dropdown-item">+38(098) 999 99-99</span>
+                                                <span class="dropdown-item">+38(098) 999 99-99</span>
+                                            </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="header__section">
+                                    <div class="basket__section">
+                                        <button class="basket__section_button">
+                                                <img src="../../Assets/assets_common/basket.svg" alt="basket">
+                                                <span data-lang-key="cart" class="basket__font">Мій кошик</span>
+                                            </button>
+                                    </div>
+                                </div>
+                                <div class="header__section">
+                                    <div class="dropdown_lang-selector">
+                                        <span data-lang-key="lang" class="dropdown_lang-title">Мова</span>
+                                        <select id="selector">
+                                                <option value="ukr">UA</option>
+                                                <option value="eng">ENG</option>
+                                            </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="header__bottom">
-                        <div class="header_wrapper">
-                            <div class="header_layout-grid">
-                                <nav class="header_section-container">
-                                    <a href="./index.html" class="item_link"><div class="section_item item">Настільні ігри</div></a>
-                                    <a href="#" class="item_link"><div class="section_item item">Пазли</div></a>
-                                    <a href="#" class="item_link"><div class="section_item item">Серії ігор</div></a>
-                                    <a href="#" class="item_link"><div class="section_item item">Комікси та книги</div></a>
-                                    <a href="#" class="item_link"><div class="section_item item">Аксесуари</div></a>
-                                </nav>
-                            </div>
-                        </div>      
                     </div>
                 </div>
-            </header>
-            <main id="main" class="main">
-                <div class="main_wrapper">
-                    <div class="catalog">
-                        <div class="catalog_top__flex">
-                            <div class="catalog_top catalog_top--left">
-                                <h1 class="main_h">Настільні ігри</h1>
-                            </div>
-                            <div class="catalog_top catalog_top--right">
-                                <div class="catalog_sort">
-                                    <div class="catalog_sort__title">Сортування:</div>
-                                    <div class="catalog_sort__list">
-                                        <button class="catalog_sort__item catalog_sort_button" role="button">за назвою</button>
-                                        <button class="catalog_sort__item catalog_sort_button" role="button">спочатку дешеве</button>
-                                        <button class="catalog_sort__item catalog_sort_button" role="button">спочатку дорожче</button>
-                                    </div>
+                <div class="header__bottom">
+                    <div class="header_wrapper">
+                        <div class="header_layout-grid">
+                            <nav class="header_section-container">
+                                <a href="./index.html" class="item_link">
+                                    <div data-lang-key="boardG" class="section_item item">Настільні ігри</div>
+                                </a>
+                                <a href="#" class="item_link">
+                                    <div data-lang-key="puzzles" class="section_item item">Пазли</div>
+                                </a>
+                                <a href="#" class="item_link">
+                                    <div data-lang-key="gameSeries" class="section_item item">Серії ігор</div>
+                                </a>
+                                <a href="#" class="item_link">
+                                    <div data-lang-key="comicsBooks" class="section_item item">Комікси та книги</div>
+                                </a>
+                                <a href="#" class="item_link">
+                                    <div data-lang-key="accs" class="section_item item">Аксесуари</div>
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main_wrapper">
+                <div class="catalog">
+                    <div class="catalog_top__flex">
+                        <div class="catalog_top catalog_top--left">
+                            <h1 data-lang-key="boardG" class="main_h">Настільні ігри</h1>
+                        </div>
+                        <div class="catalog_top catalog_top--right">
+                            <div class="catalog_sort">
+                                <div data-lang-key="sort" class="catalog_sort__title">Сортувати:</div>
+                                <div class="catalog_sort__list">
+                                    <button data-lang-key="byName" class="catalog_sort__item catalog_sort_button">за назвою</button>
+                                    <button data-lang-key="lowToH" class="catalog_sort__item catalog_sort_button">спочатку дешевше</button>
+                                    <button data-lang-key="highToL" class="catalog_sort__item catalog_sort_button">спочатку дорожче</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog_middle">
-                            <div class="section_container">
-                                <section class="filter_container">
-                                    <div class="filter_flex">
-                                        <form class="filter_box filter_price">
-                                            <div class="filter_section_h">Ціна, грн</div>
-                                            <div class="filter_section_price-range">
-                                                <div class="filter_section_inputs">
-                                                    <input type="number" class="price-placeholder" value="0" min="0" max="4260" id="price-start">
-                                                    <i class="filter-price-sep"></i>
-                                                    <input type="number" class="price-placeholder" value="4260" min="1" max="4260" id="price-end">
-                                                    <button type="submit" class="btn" type="submit">
+                    </div>
+                    <div class="catalog_middle">
+                        <div class="section_container">
+                            <section class="filter_container">
+                                <div class="filter_flex">
+                                    <form class="filter_box filter_price">
+                                        <h2 data-lang-key="price" class="filter_section_h">Ціна, грн</h2>
+                                        <div class="filter_section_price-range">
+                                            <div class="filter_section_inputs">
+                                                <input type="number" class="price-placeholder" value="0" min="0" max="4260" id="price-start">
+                                                <i class="filter-price-sep"></i>
+                                                <input type="number" class="price-placeholder" value="4260" min="1" max="4260" id="price-end">
+                                                <button type="submit" class="btn">
                                                         <span class="btn-content">OK</span>
                                                     </button>
-                                                </div>
                                             </div>
-                                            <div class="filter_section_price-slidebar">
-                                                <div class="slidebar-range"></div>
-                                                <span class="slidebar-handle" style="left:0%"></span>
-                                                <span class="slidebar-handle" style="left:100%"></span>
-                                            </div>
-                                        </form>
-                                        <div class="filter_box filter_lang">
-                                            <div class="filter_section_h">Мова</div>
-                                                <div class="filter_list">
-                                                    <ul class="ul_filter">
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                Українська
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                Англійська
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                Російська
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                    </ul>
-                                                </div>
                                         </div>
-                                        <div class="filter_box filter_available">
-                                            <div class="filter_section_h">Наявність</div>
-                                                <div class="filter_list">
-                                                    <ul class="ul_filter">
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                В наявності
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                Немає в наявності
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                Новинка
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                Зі знижкою
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                Передзамовлення
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                        <div class="filter_section_price-slidebar">
+                                            <div class="slidebar-range"></div>
+                                            <span class="slidebar-handle" style="left:0%"></span>
+                                            <span class="slidebar-handle" style="left:100%"></span>
                                         </div>
-                                        <div class="filter_box filter_count-of-players">
-                                            <div class="filter_section_h">Кількість гравців</div>
-                                            <div class="filter_list">
-                                                    <ul class="ul_filter">
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                1
+                                    </form>
+                                    <div class="filter_box filter_lang">
+                                        <h2 data-lang-key="lang" class="filter_section_h">Мова</h2>
+                                        <div class="filter_list">
+                                            <ul class="ul_filter">
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span data-lang-key="ukr">Українська</span>
                                                                 <input type="checkbox">
                                                                 <span class="checkmark"></span>
                                                             </label>
-                                                        </li>
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                2
+                                                </li>
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span data-lang-key="eng">Англійська</span>
                                                                 <input type="checkbox">
                                                                 <span class="checkmark"></span>
                                                             </label>
-                                                        </li>
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                3
+                                                </li>
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span data-lang-key="rus">Російська</span>
                                                                 <input type="checkbox">
                                                                 <span class="checkmark"></span>
                                                             </label>
-                                                        </li>
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                4
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                Понад 4
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                        </div>
-                                        <div class="filter_box filter_difficulty">
-                                            <div class="filter_section_h">Складність</div>
-                                            <div class="filter_list">
-                                                    <ul class="ul_filter">
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                Низька
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                Середня
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                        <li class="filter_item">
-                                                            <label class="label">
-                                                                Висока
-                                                                <input type="checkbox">
-                                                                <span class="checkmark"></span>
-                                                            </label>
-                                                        </li>
-                                                    </ul>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
-                                </section>
-                            </div>
-                            <div class="catalog_container">
-                                <ul class="catalog_grid">
-                                    <li class="catalog_grid__item">
-                                        <div class="catalog__item-flex">
-                                            <div class="catalog__item-view">
-                                                <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/witcher.webp" alt="the-witcher-old-world"></img>
-                                                </div>
-                                            </div>
-                                            <div class="catalog__item-info">
-                                                <div class="catalog__item-title">
-                                                    <a class="catalog__item-title-link" href="#" title="Відьмак. Старий світ (The Witcher: Old World)">
-                                                        Відьмак. Старий світ (The Witcher: Old World)
-                                                    </a>
-                                                </div>
-                                                <div class="catalog__item-price_button">
-                                                    <div class="catalog__item-price">2680 грн</div>
-                                                    <button class="catalog__item-buy-button">
-                                                        <div class="catalog__item">Купити</div>
-                                                    </button>
-                                                </div>
-                                            </div>
+                                    <div class="filter_box filter_available">
+                                        <h2 data-lang-key="availab" class="filter_section_h">Наявність</h2>
+                                        <div class="filter_list">
+                                            <ul class="ul_filter">
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span data-lang-key="inStock">В наявності</span>
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span data-lang-key="notAv">Немає в наявності</span>
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span data-lang-key="new">Новинка</span>
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span data-lang-key="discount">Зі знижкою</span>
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li class="filter_item">
+                                                    <label data-lang-key="preOrder" class="label">Передзамовлення
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                            </ul>
                                         </div>
-                                    </li>
-                                    
-                                    <li class="catalog_grid__item">
-                                        <div class="catalog__item-flex">
-                                            <div class="catalog__item-view">
-                                                <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/serif.webp" alt="serif-of-nottingham"></img>
-                                                </div>
-                                            </div>
-                                            <div class="catalog__item-info">
-                                                    <div class="catalog__item-title">
-                                                        <a class="catalog__item-title-link" href="#" title="Шериф Ноттінгема (Sheriff of Nottingham)">
-                                                        Шериф Ноттінгема (Sheriff of Nottingham)
-                                                    </a>
-                                                </div>
-                                                <div class="catalog__item-price_button">
-                                                    <div class="catalog__item-price">1710 грн</div>
-                                                    <button class="catalog__item-buy-button">
-                                                        <div class="catalog__item">Купити</div>
-                                                    </button>
-                                                </div>
-                                            </div>
+                                    </div>
+                                    <div class="filter_box filter_count-of-players">
+                                        <h2 data-lang-key="countOfP" class="filter_section_h">Кількість гравців</h2>
+                                        <div class="filter_list">
+                                            <ul class="ul_filter">
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span>1</span>
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                </li>
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span>2</span>
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                </li>
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span>2</span>
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                </li>
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span>4</span>
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                </li>
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span data-lang-key="more4">Понад 4</span>
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                </li>
+                                            </ul>
                                         </div>
-                                    </li>
-                                    
-                                    <li class="catalog_grid__item">
-                                        <div class="catalog__item-flex">
-                                            <div class="catalog__item-view">
-                                                <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/high-society.webp" alt="high-society"></img>
-                                                </div>
-                                            </div>
-                                                <div class="catalog__item-info">
-                                                    <div class="catalog__item-title">
-                                                    <a class="catalog__item-title-link" href="#" title="Вище суспільство (High Society)">
-                                                        Вище суспільство (High Society)
-                                                    </a>
-                                                </div>
-                                                <div class="catalog__item-price_button">
-                                                    <div class="catalog__item-price">480 грн</div>
-                                                    <button class="catalog__item-buy-button">
-                                                        <div class="catalog__item">Купити</div>
-                                                    </button>
-                                                </div>
-                                            </div>
+                                    </div>
+                                    <div class="filter_box filter_difficulty">
+                                        <h2 data-lang-key="difficulty" class="filter_section_h">Складність</h2>
+                                        <div class="filter_list">
+                                            <ul class="ul_filter">
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span data-lang-key="easy">Низька</span>
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                </li>
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span data-lang-key="medium">Середня</span>
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                </li>
+                                                <li class="filter_item">
+                                                    <label class="label">
+                                                                <span data-lang-key="difficult">Висока</span>
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                </li>
+                                            </ul>
                                         </div>
-                                    </li>
-                                    
-                                    <li class="catalog_grid__item">
-                                        <div class="catalog__item-flex">
-                                            <div class="catalog__item-view">
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="catalog_container">
+                            <ul class="catalog_grid">
+                                <li class="catalog_grid__item">
+                                    <div class="catalog__item-flex">
+                                        <div class="catalog__item-view">
                                             <div class="catalog__item-card-img">
-                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/game-of-thrones.webp" alt="A-Game-of-Thrones-The-Board-Game-Second-Edition"></img>
+                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/witcher.webp" alt="the-witcher-old-world">
                                             </div>
                                         </div>
                                         <div class="catalog__item-info">
-                                                <div class="catalog__item-title">
-                                                    <a class="catalog__item-title-link" href="#" title="Гра престолів. Друге видання (A Game of Thrones: The Board Game Second Edition)">
+                                            <div class="catalog__item-title">
+                                                <a class="catalog__item-title-link" href="#" title="Відьмак. Старий світ (The Witcher: Old World)">
+                                                        Відьмак. Старий світ (The Witcher: Old World)
+                                                    </a>
+                                            </div>
+                                            <div class="catalog__item-price_button">
+                                                <div class="catalog__item-price">2680 <span data-lang-key="uah"></span></div>
+                                                <button data-lang-key="buy" class="catalog__item-buy-button">Купити</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="catalog_grid__item">
+                                    <div class="catalog__item-flex">
+                                        <div class="catalog__item-view">
+                                            <div class="catalog__item-card-img">
+                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/serif.webp" alt="serif-of-nottingham">
+                                            </div>
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-title">
+                                                <a class="catalog__item-title-link" href="#" title="Шериф Ноттінгема (Sheriff of Nottingham)">
+                                                        Шериф Ноттінгема (Sheriff of Nottingham)
+                                                    </a>
+                                            </div>
+                                            <div class="catalog__item-price_button">
+                                                <div class="catalog__item-price">1710 <span data-lang-key="uah"></span></div>
+                                                <button data-lang-key="buy" class="catalog__item-buy-button">Купити</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="catalog_grid__item">
+                                    <div class="catalog__item-flex">
+                                        <div class="catalog__item-view">
+                                            <div class="catalog__item-card-img">
+                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/high-society.webp" alt="high-society">
+                                            </div>
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-title">
+                                                <a class="catalog__item-title-link" href="#" title="Вище суспільство (High Society)">
+                                                        Вище суспільство (High Society)
+                                                    </a>
+                                            </div>
+                                            <div class="catalog__item-price_button">
+                                                <div class="catalog__item-price">480 <span data-lang-key="uah"></span></div>
+                                                <button data-lang-key="buy" class="catalog__item-buy-button">Купити</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="catalog_grid__item">
+                                    <div class="catalog__item-flex">
+                                        <div class="catalog__item-view">
+                                            <div class="catalog__item-card-img">
+                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/game-of-thrones.webp" alt="A-Game-of-Thrones-The-Board-Game-Second-Edition">
+                                            </div>
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-title">
+                                                <a class="catalog__item-title-link" href="#" title="Гра престолів. Друге видання (A Game of Thrones: The Board Game Second Edition)">
                                                         Гра престолів. Друге видання (A Game of Thrones: The Board Game Second Edition)
                                                     </a>
-                                                </div>
-                                                <div class="catalog__item-price_button">
-                                                    <div class="catalog__item-price">2600 грн</div>
-                                                    <button class="catalog__item-buy-button">
-                                                        <div class="catalog__item">Купити</div>
-                                                    </button>
-                                                </div>
+                                            </div>
+                                            <div class="catalog__item-price_button">
+                                                <div class="catalog__item-price">2600 <span data-lang-key="uah"></span></div>
+                                                <button data-lang-key="buy" class="catalog__item-buy-button">Купити</button>
                                             </div>
                                         </div>
-                                    </li>
-                                    
-                                    <li class="catalog_grid__item">
-                                        <div class="catalog__item-flex">
-                                            <div class="catalog__item-view">
-                                                <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/nidavellir.webp" alt="Nidavellir"></img>
-                                                </div>
+                                    </div>
+                                </li>
+
+                                <li class="catalog_grid__item">
+                                    <div class="catalog__item-flex">
+                                        <div class="catalog__item-view">
+                                            <div class="catalog__item-card-img">
+                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/nidavellir.webp" alt="Nidavellir">
                                             </div>
-                                            <div class="catalog__item-info">
-                                                <div class="catalog__item-title">
-                                                    <a class="catalog__item-title-link" href="#" title="Нідавеллір (Nidavellir)">
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-title">
+                                                <a class="catalog__item-title-link" href="#" title="Нідавеллір (Nidavellir)">
                                                         Нідавеллір (Nidavellir)
                                                     </a>
-                                                </div>
-                                                <div class="catalog__item-price_button">
-                                                    <div class="catalog__item-price">1520 грн</div>
-                                                    <button class="catalog__item-buy-button">
-                                                        <div class="catalog__item">Купити</div>
-                                                    </button>
-                                                </div>
+                                            </div>
+                                            <div class="catalog__item-price_button">
+                                                <div class="catalog__item-price">1520 <span data-lang-key="uah"></span></div>
+                                                <button data-lang-key="buy" class="catalog__item-buy-button">Купити</button>
                                             </div>
                                         </div>
-                                    </li>
+                                    </div>
+                                </li>
 
-                                    <li class="catalog_grid__item">
-                                        <div class="catalog__item-flex">
-                                            <div class="catalog__item-view">
-                                                <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/terraforming-mars.webp" alt="serif"></img>
-                                                </div>
+                                <li class="catalog_grid__item">
+                                    <div class="catalog__item-flex">
+                                        <div class="catalog__item-view">
+                                            <div class="catalog__item-card-img">
+                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/terraforming-mars.webp" alt="serif">
                                             </div>
-                                            <div class="catalog__item-info">
-                                                <div class="catalog__item-title">
-                                                    <a class="catalog__item-title-link" href="#" title="Тераформування Марса (Terraforming Mars)">
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-title">
+                                                <a class="catalog__item-title-link" href="#" title="Тераформування Марса (Terraforming Mars)">
                                                         Тераформування Марса (Terraforming Mars)
                                                     </a>
-                                                </div>
-                                                <div class="catalog__item-price_button">
-                                                    <div class="catalog__item-price">2450 грн</div>
-                                                    <button class="catalog__item-buy-button">
-                                                        <div class="catalog__item">Купити</div>
-                                                    </button>
-                                                </div>
+                                            </div>
+                                            <div class="catalog__item-price_button">
+                                                <div class="catalog__item-price">2450 <span data-lang-key="uah"></span></div>
+                                                <button data-lang-key="buy" class="catalog__item-buy-button">Купити</button>
                                             </div>
                                         </div>
-                                    </li>
-                                    
-                                    <li class="catalog_grid__item">
-                                        <div class="catalog__item-flex">
-                                            <div class="catalog__item-view">
-                                                <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/veliki-spodivannya.webp" alt="serif"></img>
-                                                </div>
+                                    </div>
+                                </li>
+
+                                <li class="catalog_grid__item">
+                                    <div class="catalog__item-flex">
+                                        <div class="catalog__item-view">
+                                            <div class="catalog__item-card-img">
+                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/veliki-spodivannya.webp" alt="serif">
                                             </div>
-                                            <div class="catalog__item-info">
-                                                <div class="catalog__item-title">
-                                                    <a class="catalog__item-title-link" href="#" title="Nanty Narking. Великі сподівання">
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-title">
+                                                <a class="catalog__item-title-link" href="#" title="Nanty Narking. Великі сподівання">
                                                         Nanty Narking. Великі сподівання
                                                     </a>
-                                                </div>
-                                                <div class="catalog__item-price_button">
-                                                    <div class="catalog__item-price">1550 грн</div>
-                                                    <button class="catalog__item-buy-button">
-                                                        <div class="catalog__item">Купити</div>
-                                                    </button>
-                                                </div>
+                                            </div>
+                                            <div class="catalog__item-price_button">
+                                                <div class="catalog__item-price">1550 <span data-lang-key="uah"></span></div>
+                                                <button data-lang-key="buy" class="catalog__item-buy-button">Купити</button>
                                             </div>
                                         </div>
-                                    </li>
+                                    </div>
+                                </li>
 
-                                    <li class="catalog_grid__item">
-                                        <div class="catalog__item-flex">
-                                            <div class="catalog__item-view">
-                                                <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/wonderful-world.webp" alt="It-is-a-Wonderful-World)">
-                                                </div>
+                                <li class="catalog_grid__item">
+                                    <div class="catalog__item-flex">
+                                        <div class="catalog__item-view">
+                                            <div class="catalog__item-card-img">
+                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/wonderful-world.webp" alt="It-is-a-Wonderful-World">
                                             </div>
-                                            <div class="catalog__item-info">
-                                                <div class="catalog__item-title">
-                                                    <a class="catalog__item-title-link" href="#" title="Цей дивовижний світ (It's a Wonderful World)">
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-title">
+                                                <a class="catalog__item-title-link" href="#" title="Цей дивовижний світ (It's a Wonderful World)">
                                                         Цей дивовижний світ (It's a Wonderful World)
                                                     </a>
-                                                </div>
-                                                <div class="catalog__item-price_button">
-                                                    <div class="catalog__item-price">1800 грн</div>
-                                                    <button class="catalog__item-buy-button">
-                                                        <div class="catalog__item">Купити</div>
-                                                    </button>
-                                                </div>
+                                            </div>
+                                            <div class="catalog__item-price_button">
+                                                <div class="catalog__item-price">1800 <span data-lang-key="uah"></span></div>
+                                                <button data-lang-key="buy" class="catalog__item-buy-button">Купити</button>
                                             </div>
                                         </div>
-                                    </li>
-                                    
-                                    <li class="catalog_grid__item">
-                                        <div class="catalog__item-flex">
-                                            <div class="catalog__item-view">
-                                                <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/wonderlands-war.webp" alt="Wonderland's-War)">
-                                                </div>
+                                    </div>
+                                </li>
+
+                                <li class="catalog_grid__item">
+                                    <div class="catalog__item-flex">
+                                        <div class="catalog__item-view">
+                                            <div class="catalog__item-card-img">
+                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/wonderlands-war.webp" alt="Wonderland's-War">
                                             </div>
-                                            <div class="catalog__item-info">
-                                                <div class="catalog__item-title">
-                                                    <a class="catalog__item-title-link" href="#" title="Битва за Дивокрай (Wonderland's War)">
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-title">
+                                                <a class="catalog__item-title-link" href="#" title="Битва за Дивокрай (Wonderland's War)">
                                                         Битва за Дивокрай (Wonderland's War)
                                                     </a>
-                                                </div>
-                                                <div class="catalog__item-price_button">
-                                                    <div class="catalog__item-price">2999 грн</div>
-                                                    <button class="catalog__item-buy-button">
-                                                        <div class="catalog__item">Купити</div>
-                                                    </button>
-                                                </div>
+                                            </div>
+                                            <div class="catalog__item-price_button">
+                                                <div class="catalog__item-price">2999 <span data-lang-key="uah"></span></div>
+                                                <button data-lang-key="buy" class="catalog__item-buy-button">Купити</button>
                                             </div>
                                         </div>
-                                    </li>
+                                    </div>
+                                </li>
 
-                                    <li class="catalog_grid__item">
-                                        <div class="catalog__item-flex">
-                                            <div class="catalog__item-view">
-                                                <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/lord-of-the-rings.webp" alt="lord-of-the-rings">
-                                                </div>
+                                <li class="catalog_grid__item">
+                                    <div class="catalog__item-flex">
+                                        <div class="catalog__item-view">
+                                            <div class="catalog__item-card-img">
+                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/lord-of-the-rings.webp" alt="lord-of-the-rings">
                                             </div>
-                                            <div class="catalog__item-info">
-                                                <div class="catalog__item-title">
-                                                    <a class="catalog__item-title-link" href="#" title="Володар Перснів. Пригоди в Середзем'ї (The Lord of the Rings: Journeys in Middle-Earth)">
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-title">
+                                                <a class="catalog__item-title-link" href="#" title="Володар Перснів. Пригоди в Середзем'ї (The Lord of the Rings: Journeys in Middle-Earth)">
                                                         Володар Перснів. Пригоди в Середзем'ї (The Lord of the Rings: Journeys in Middle-Earth)
                                                     </a>
-                                                </div>
-                                                <div class="catalog__item-price_button">
-                                                    <div class="catalog__item-price">4250 грн</div>
-                                                    <button class="catalog__item-buy-button">
-                                                        <div class="catalog__item">Купити</div>
-                                                    </button>
-                                                </div>
+                                            </div>
+                                            <div class="catalog__item-price_button">
+                                                <div class="catalog__item-price">4250 <span data-lang-key="uah"></span></div>
+                                                <button data-lang-key="buy" class="catalog__item-buy-button">Купити</button>
                                             </div>
                                         </div>
-                                    </li>
-                                    
-                                    <li class="catalog_grid__item">
-                                        <div class="catalog__item-flex">
-                                            <div class="catalog__item-view">
-                                                <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/novyi-kovcheh.webp" alt="novyi-kovcheh">
-                                                </div>
+                                    </div>
+                                </li>
+
+                                <li class="catalog_grid__item">
+                                    <div class="catalog__item-flex">
+                                        <div class="catalog__item-view">
+                                            <div class="catalog__item-card-img">
+                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/novyi-kovcheh.webp" alt="novyi-kovcheh">
                                             </div>
-                                            <div class="catalog__item-info">
-                                                <div class="catalog__item-title">
-                                                    <a class="catalog__item-title-link" href="#" title="Новий ковчег (Ark Nova)">
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-title">
+                                                <a class="catalog__item-title-link" href="#" title="Новий ковчег (Ark Nova)">
                                                         Новий ковчег (Ark Nova)
                                                     </a>
-                                                </div>
-                                                <div class="catalog__item-price_button">
-                                                    <div class="catalog__item-price">3150 грн</div>
-                                                    <button class="catalog__item-buy-button">
-                                                        <div class="catalog__item">Купити</div>
-                                                    </button>
-                                                </div>
+                                            </div>
+                                            <div class="catalog__item-price_button">
+                                                <div class="catalog__item-price">3150 <span data-lang-key="uah"></span></div>
+                                                <button data-lang-key="buy" class="catalog__item-buy-button">Купити</button>
                                             </div>
                                         </div>
-                                    </li>
-                                    
-                                    <li class="catalog_grid__item">
-                                        <div class="catalog__item-flex">
-                                            <div class="catalog__item-view">
-                                                <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/star-wars.webp" alt="star-wars">
-                                                </div>
+                                    </div>
+                                </li>
+
+                                <li class="catalog_grid__item">
+                                    <div class="catalog__item-flex">
+                                        <div class="catalog__item-view">
+                                            <div class="catalog__item-card-img">
+                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/star-wars.webp" alt="star-wars">
                                             </div>
-                                            <div class="catalog__item-info">
-                                                <div class="catalog__item-title">
-                                                    <a class="catalog__item-title-link" href="#" title="Star Wars. Зовнішнє кільце (Star Wars Outer Rim)">
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-title">
+                                                <a class="catalog__item-title-link" href="#" title="Star Wars. Зовнішнє кільце (Star Wars Outer Rim)">
                                                         Star Wars. Зовнішнє кільце (Star Wars Outer Rim)
                                                     </a>
-                                                </div>
-                                                <div class="catalog__item-price_button">
-                                                    <div class="catalog__item-price">3575 грн</div>
-                                                    <button class="catalog__item-buy-button">
-                                                        <div class="catalog__item">Купити</div>
-                                                    </button>
-                                                </div>
+                                            </div>
+                                            <div class="catalog__item-price_button">
+                                                <div class="catalog__item-price">3575 <span data-lang-key="uah"></span></div>
+                                                <button data-lang-key="buy" class="catalog__item-buy-button">Купити</button>
                                             </div>
                                         </div>
-                                    </li>
+                                    </div>
+                                </li>
 
-                                </ul>
-                            </div>
+                            </ul>
                         </div>
                     </div>
+                    <div class="catalog_nav_container">
+                        <nav class="nav_container">
+                            <div class="pages_container">
+                                <span class="pages_item pages_item--is-disabled">
+                                        <a href="#"></a>
+                                    </span>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
-            </main>
-        </div>
-    </body>
+
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="../../JavaScript/language.js"></script>
+    <script type="module" src="../../JavaScript/languageLib.js"></script>
+</body>
+
 </html>
