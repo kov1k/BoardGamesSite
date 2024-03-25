@@ -7,6 +7,7 @@
     --orange: rgb(255, 105, 3);
     --orange-dark: rgba(255, 104, 3, 0.897);
     --orange-active: #ffb370;
+    --gray-border: rgba(0, 0, 0, 0.15);
 }
 html {
     scroll-behavior: smooth;
@@ -100,9 +101,6 @@ li, ul{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .header_logo{
-    display: flex;
-    align-items: center;
-    min-width: 60px;
     padding-right: 20px;
 }
 .logo_title{
@@ -143,9 +141,19 @@ li, ul{
     font-size: 20px;
     font-weight: 600;
 }
+.logo_link{
+    display: flex;
+    align-items: center;
+}
 .basket__section img{
-    width: 60px;
-    height: 60px;
+    width: 45px;
+}
+.basket__section_button{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
 }
 .header__section--contacts{
     font-size: 20px;
@@ -334,7 +342,9 @@ li, ul{
 .filter_flex{
     display: flex;
     flex-direction: column;
-
+}
+.filter_box:first-child{
+    margin-bottom: 20px;
 }
 .filter_section_h{
     font-size: 20px;
@@ -343,6 +353,7 @@ li, ul{
 }
 
 .price-placeholder{
+    width: 33%;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 2px;
     box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.15);
@@ -350,6 +361,7 @@ li, ul{
     height: 26px;
     font-size: 14px;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -360,19 +372,114 @@ input::-webkit-inner-spin-button {
 }
 .filter_section_inputs .btn{
     height: 26px;
+    width: 26%;
     border: 1px solid rgba(0,0,0,0.15);
     padding: 0 6px;
     margin-left: 10px;
+    cursor: pointer;
 }
 .filter-price-sep {
     flex-shrink: 0;
-    width: 12px;
+    width: 5%;
     height: 1px;
     margin: 11px 2px 0;
     background-color: #acacac;
 }
 
+.filter_section_price-slidebar{
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background: #8080806b;
+    margin: 10px 0 0 0;
+    border-radius: 6px;
+}
+.slidebar-range{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 5px;
+    border-radius: 4px;
+}
+.slidebar-handle{
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    background-color: white;
+    border: black 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    top: -4px;
+    margin-left: -6px;
+}
+/* checkbox start */
 
+.label {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .label:hover{
+    color: var(--orange);
+  }
+  /* Hide the browser's default checkbox */
+  .label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px; 
+    background-color: #fff;
+    border: 1px solid var(--gray-border);
+    border-radius: 2px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .label:hover input[type="checkbox"] + .checkmark {
+    background-color: #ffffff;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .label input[type="checkbox"]:checked + .checkmark {
+    background-color: #000000;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .label input[type="checkbox"]:checked + .checkmark:after {
+    display: block;
+    left: 6px;
+    top: 1px;
+    width: 4px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
 /* Catalog items */
 
 
@@ -381,6 +488,7 @@ input::-webkit-inner-spin-button {
     grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
     grid-template-rows: repeat(3, 350px);
     gap: 12px;
+    margin: 0 0 0 15px;
 }
 .catalog__item-flex{
     display: flex;

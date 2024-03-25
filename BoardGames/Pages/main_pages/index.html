@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../Style/style.css" type="text/css">
+        <link rel="stylesheet" href="../../Style/style.css" type="text/css">
         <title>BGS</title>
     </head>
     <body>
@@ -14,15 +14,15 @@
                             <div class="header_layout-box header_layout--top">
                                 <div class="header_logo header__column--left">
                                     <a class="logo_link" href="#">
-                                        <img alt="BoardGamesShop" src="../Assets/logo.png" height="80px" width="80px">
+                                        <img alt="BoardGamesShop" src="../../Assets/assets_common/logo.png" height="80px" width="80px">
+                                        <span class="logo_title">BGStore</span>
                                     </a>
-                                    <span class="logo_title">BGStore</span>
                                 </div>
                                 <div class="header_row header__column--middle">
                                         <form action="#" class="preview-search-field">
                                             <input type="text" class="search search_input" placeholder="пошук товарів" autocomplete="off" value>
                                             <button type="submit" class="search search_button" disabled>
-                                                <img src="../Assets/icon-search.svg" alt="search" class="search search_icon">
+                                                <img src="../../Assets/assets_common/icon-search.svg" alt="search" class="search search_icon">
                                             </button>  
                                         </form>
                                     
@@ -41,8 +41,10 @@
                                     </div>
                                     <div class="header__section">
                                         <div class="basket__section">
-                                            <img src="../Assets/basket.svg" alt="basket">
-                                            <span class="basket__font">Мій кошик</span>
+                                            <button class="basket__section_button">
+                                                <img src="../../Assets/assets_common/basket.svg" alt="basket">
+                                                <span class="basket__font">Мій кошик</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -54,10 +56,10 @@
                             <div class="header_layout-grid">
                                 <nav class="header_section-container">
                                     <a href="./index.html" class="item_link"><div class="section_item item">Настільні ігри</div></a>
-                                    <a href="./puzzles.html" class="item_link"><div class="section_item item">Пазли</div></a>
-                                    <a href="./gameSeries.html" class="item_link"><div class="section_item item">Серії ігор</div></a>
-                                    <a href="./comics.html" class="item_link"><div class="section_item item">Комікси та книги</div></a>
-                                    <a href="./accessories.html" class="item_link"><div class="section_item item">Аксесуари</div></a>
+                                    <a href="#" class="item_link"><div class="section_item item">Пазли</div></a>
+                                    <a href="#" class="item_link"><div class="section_item item">Серії ігор</div></a>
+                                    <a href="#" class="item_link"><div class="section_item item">Комікси та книги</div></a>
+                                    <a href="#" class="item_link"><div class="section_item item">Аксесуари</div></a>
                                 </nav>
                             </div>
                         </div>      
@@ -86,7 +88,7 @@
                             <div class="section_container">
                                 <section class="filter_container">
                                     <div class="filter_flex">
-                                        <div class="filter_box filter_price">
+                                        <form class="filter_box filter_price">
                                             <div class="filter_section_h">Ціна, грн</div>
                                             <div class="filter_section_price-range">
                                                 <div class="filter_section_inputs">
@@ -98,11 +100,151 @@
                                                     </button>
                                                 </div>
                                             </div>
-                                            <div class="filter_section_price-slidebar"></div>
+                                            <div class="filter_section_price-slidebar">
+                                                <div class="slidebar-range"></div>
+                                                <span class="slidebar-handle" style="left:0%"></span>
+                                                <span class="slidebar-handle" style="left:100%"></span>
+                                            </div>
+                                        </form>
+                                        <div class="filter_box filter_lang">
+                                            <div class="filter_section_h">Мова</div>
+                                                <div class="filter_list">
+                                                    <ul class="ul_filter">
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Українська
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Англійська
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Російська
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                         </div>
-                                        <div class="filter_box filter_available"></div>
-                                        <div class="filter_box filter_count-of-players"></div>
-                                        <div class="filter_box filter_difficulty"></div>
+                                        <div class="filter_box filter_available">
+                                            <div class="filter_section_h">Наявність</div>
+                                                <div class="filter_list">
+                                                    <ul class="ul_filter">
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                В наявності
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Немає в наявності
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Новинка
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Зі знижкою
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Передзамовлення
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                        <div class="filter_box filter_count-of-players">
+                                            <div class="filter_section_h">Кількість гравців</div>
+                                            <div class="filter_list">
+                                                    <ul class="ul_filter">
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                1
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                2
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                3
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                4
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Понад 4
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                        <div class="filter_box filter_difficulty">
+                                            <div class="filter_section_h">Складність</div>
+                                            <div class="filter_list">
+                                                    <ul class="ul_filter">
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Низька
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Середня
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="filter_item">
+                                                            <label class="label">
+                                                                Висока
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                        </div>
                                     </div>
                                 </section>
                             </div>
@@ -112,7 +254,7 @@
                                         <div class="catalog__item-flex">
                                             <div class="catalog__item-view">
                                                 <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../Assets/witcher.webp" alt="the-witcher-old-world"></img>
+                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/witcher.webp" alt="the-witcher-old-world"></img>
                                                 </div>
                                             </div>
                                             <div class="catalog__item-info">
@@ -135,7 +277,7 @@
                                         <div class="catalog__item-flex">
                                             <div class="catalog__item-view">
                                                 <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../Assets/serif.webp" alt="serif-of-nottingham"></img>
+                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/serif.webp" alt="serif-of-nottingham"></img>
                                                 </div>
                                             </div>
                                             <div class="catalog__item-info">
@@ -158,7 +300,7 @@
                                         <div class="catalog__item-flex">
                                             <div class="catalog__item-view">
                                                 <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../Assets/high-society.webp" alt="high-society"></img>
+                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/high-society.webp" alt="high-society"></img>
                                                 </div>
                                             </div>
                                                 <div class="catalog__item-info">
@@ -181,7 +323,7 @@
                                         <div class="catalog__item-flex">
                                             <div class="catalog__item-view">
                                             <div class="catalog__item-card-img">
-                                                <img class="catalog_item-picture" src="../Assets/game-of-thrones.webp" alt="A-Game-of-Thrones-The-Board-Game-Second-Edition"></img>
+                                                <img class="catalog_item-picture" src="../../Assets/assets_boardg/game-of-thrones.webp" alt="A-Game-of-Thrones-The-Board-Game-Second-Edition"></img>
                                             </div>
                                         </div>
                                         <div class="catalog__item-info">
@@ -204,7 +346,7 @@
                                         <div class="catalog__item-flex">
                                             <div class="catalog__item-view">
                                                 <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../Assets/nidavellir.webp" alt="Nidavellir"></img>
+                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/nidavellir.webp" alt="Nidavellir"></img>
                                                 </div>
                                             </div>
                                             <div class="catalog__item-info">
@@ -227,7 +369,7 @@
                                         <div class="catalog__item-flex">
                                             <div class="catalog__item-view">
                                                 <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../Assets/terraforming-mars.webp" alt="serif"></img>
+                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/terraforming-mars.webp" alt="serif"></img>
                                                 </div>
                                             </div>
                                             <div class="catalog__item-info">
@@ -250,7 +392,7 @@
                                         <div class="catalog__item-flex">
                                             <div class="catalog__item-view">
                                                 <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../Assets/veliki-spodivannya.webp" alt="serif"></img>
+                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/veliki-spodivannya.webp" alt="serif"></img>
                                                 </div>
                                             </div>
                                             <div class="catalog__item-info">
@@ -273,7 +415,7 @@
                                         <div class="catalog__item-flex">
                                             <div class="catalog__item-view">
                                                 <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../Assets/wonderful-world.webp" alt="It-is-a-Wonderful-World)">
+                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/wonderful-world.webp" alt="It-is-a-Wonderful-World)">
                                                 </div>
                                             </div>
                                             <div class="catalog__item-info">
@@ -296,7 +438,7 @@
                                         <div class="catalog__item-flex">
                                             <div class="catalog__item-view">
                                                 <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../Assets/wonderlands-war.webp" alt="Wonderland's-War)">
+                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/wonderlands-war.webp" alt="Wonderland's-War)">
                                                 </div>
                                             </div>
                                             <div class="catalog__item-info">
@@ -319,7 +461,7 @@
                                         <div class="catalog__item-flex">
                                             <div class="catalog__item-view">
                                                 <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../Assets/lord-of-the-rings.webp" alt="lord-of-the-rings">
+                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/lord-of-the-rings.webp" alt="lord-of-the-rings">
                                                 </div>
                                             </div>
                                             <div class="catalog__item-info">
@@ -342,7 +484,7 @@
                                         <div class="catalog__item-flex">
                                             <div class="catalog__item-view">
                                                 <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../Assets/novyi-kovcheh.webp" alt="novyi-kovcheh">
+                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/novyi-kovcheh.webp" alt="novyi-kovcheh">
                                                 </div>
                                             </div>
                                             <div class="catalog__item-info">
@@ -365,7 +507,7 @@
                                         <div class="catalog__item-flex">
                                             <div class="catalog__item-view">
                                                 <div class="catalog__item-card-img">
-                                                    <img class="catalog_item-picture" src="../Assets/star-wars.webp" alt="star-wars">
+                                                    <img class="catalog_item-picture" src="../../Assets/assets_boardg/star-wars.webp" alt="star-wars">
                                                 </div>
                                             </div>
                                             <div class="catalog__item-info">
