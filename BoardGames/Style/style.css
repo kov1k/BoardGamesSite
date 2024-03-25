@@ -145,6 +145,10 @@ li, ul{
     display: flex;
     align-items: center;
 }
+.logo_link img{
+    width: 80px;
+    height: 80px;
+}
 .basket__section img{
     width: 45px;
 }
@@ -264,12 +268,12 @@ li, ul{
     background-color: var(--orange-dark); 
     transition: all .3s;
 }
-@media only screen and (max-width:1280px) {
-    /* .header__column--middle{
-        width: 35%;
-        color: green;
-     } */
-} 
+/* @media screen and (min-width:600px) {
+    .main{
+        background-color: olive;
+    }
+}  */
+
 /* Main start */
 .main{
     background-color: white;
@@ -500,7 +504,7 @@ input::-webkit-inner-spin-button {
 }
 .catalog__item-card-img{
     margin-bottom: 15px;
-    padding: 15px 15px 0;
+    padding: 10px 15px 0;
 }
 .catalog_item-picture{
     width: 100%;
