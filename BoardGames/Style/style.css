@@ -707,3 +707,22 @@ input::-webkit-inner-spin-button {
 .catalog__item-flex:hover::before {
     border-color: black;
 }
+/* ================================== */
+        /* Изображение */
+        #fullscreen-overlay {
+            z-index: 100;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 1); /* Полупрозрачный черный фон */
+            }
+            /* Размер изображения */
+            #fullscreen-image {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            }
