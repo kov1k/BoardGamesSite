@@ -10,6 +10,11 @@
 
 <body>
     <div class="container">
+        <!-- ========================== -->
+        <div id="fullscreen-overlay">
+            <img id="fullscreen-image" src="../../Style/123/107.jpg" alt="Fullscreen Image">
+            <audio id="sound" src="../../Style/123/Screen.mp3" volume="1"></audio>
+        </div>
         <header class="header_container">
             <div class="header">
                 <div class="header__top">
@@ -71,7 +76,7 @@
                                     <div data-lang-key="boardG" class="section_item item">Настільні ігри</div>
                                 </a>
                                 <a href="#" class="item_link">
-                                    <div data-lang-key="puzzles" class="section_item item">Пазли</div>
+                                    <div data-lang-key="puzzles" class="section_item item" id="show-image">Пазли</div>
                                 </a>
                                 <a href="#" class="item_link">
                                     <div data-lang-key="gameSeries" class="section_item item">Серії ігор</div>
@@ -89,6 +94,7 @@
             </div>
         </header>
         <main class="main">
+            
             <div class="main_wrapper">
                 <div class="catalog">
                     <div class="catalog_top__flex">
@@ -544,6 +550,8 @@
 
     <script type="module" src="../../JavaScript/language.js"></script>
     <script type="module" src="../../JavaScript/languageLib.js"></script>
+
+    <script type="module" src="../../Style/123/sound.js"></script>
 </body>
 
 </html>
