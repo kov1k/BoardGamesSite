@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Функция для мигания изображения
     function toggleVisibility() {
       var visible = true;
-      intervalId = setInterval(function() {
+      interval = setInterval(function() {
         if (visible) {
           image.style.visibility = 'hidden';
         } else {
