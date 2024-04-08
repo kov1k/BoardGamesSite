@@ -65,7 +65,6 @@ function processform(){
         if (option.checked) {
             whichValues.push(option.value);
         }
-        console.log(option.value);
     });
     result_str += "Розділи сайту, які вам подобаються: " + whichValues.join(', ') + newline;
 
@@ -78,4 +77,16 @@ function clearform() {
             item.parentNode.dataset.totalValue = item.dataset = itemValue;
 
     })
+}
+function sendform(){
+    if (form1.checkValidity()) {
+        alert("Повідомлення успішно відправлено!");
+        document.body.classList.toggle('_lock');
+        const surveyForm_bg = document.querySelector('.surveyForm_bg');
+        surveyForm_bg.classList.toggle('active');
+        closeSurvey();
+    } else {
+        alert("Будь ласка, заповніть всі обов'язкові поля.");
+    }
+    
 }
