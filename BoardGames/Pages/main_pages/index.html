@@ -5,18 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Style/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>BGS</title>
+    
 </head>
 
 <body>
     <div class="container">
-        <!-- ========================== -->
-        <div id="fullscreen-overlay">
-            <img id="fullscreen-image" src="../../Style/123/107.jpg" alt="Fullscreen Image">
-            <audio id="sound" src="../../Style/123/Screen.mp3" volume="1"></audio>
-        </div>
-        <!-- ^^^ DELETE THIS ^^^ -->
         <header class="header_container">
+            <div class="surveyForm_bg"></div>
             <div class="header">
                 <div class="header__top">
                     <div class="header_wrapper">
@@ -76,7 +73,7 @@
                                 <a href="./index.html" class="item_link">
                                     <div data-lang-key="boardG" class="section_item item">Настільні ігри</div>
                                 </a>
-                                <a href="#" class="item_link" id="show-image">
+                                <a href="#" class="item_link">
                                     <div data-lang-key="puzzles" class="section_item item">Пазли</div>
                                 </a>
                                 <a href="#" class="item_link">
@@ -95,8 +92,68 @@
             </div>
         </header>
         <main class="main">
-            
             <div class="main_wrapper">
+                <div id="surveyForm">
+                    <div class="survey-container">
+                        <div class="survey-title">Опитування для відвідувачів сайту</div>
+                        <div class="survey-main-container">
+                            <div class="survey-main-content">
+                                <form name="form1" id="form1" action="mailto:survey@fakecorp.net">
+                                        <div class="form-element">
+                                            <label for="fname">Ім'я:</label>
+                                            <input type="text" name="fname" id="fname" required>
+                                        </div>
+                                        <div class="form-element">
+                                            <label for="email">Електронна пошта:</label>
+                                            <input type="email" name="email" id="email" required>
+                                        </div>
+                                        <div class="form-element">
+                                            <span class="form-question">Наскільки ви оцінюєте дизайн сайту?</span>
+                                            <div class="form-rating" data-total-value="0">
+                                                <div class="rating__item" data-item-value="5">★</div>
+                                                <div class="rating__item" data-item-value="4">★</div>
+                                                <div class="rating__item" data-item-value="3">★</div>
+                                                <div class="rating__item" data-item-value="2">★</div>
+                                                <div class="rating__item" data-item-value="1">★</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-element">
+                                        <span class="form-question">Де ви дізналися про нас?</span>
+                                            <div class="form-where">
+                                                <label><input type="radio" name="where" value="Пошук у браузері" checked="checked"> Пошук у браузері<br></label>
+                                                <label><input type="radio" name="where" value="Реклама"> Реклама<br></label>
+                                                <label><input type="radio" name="where" value="Розповіли знайомі/друзі/родичі"> Розповіли знайомі/друзі/родичі<br></label>
+                                                <label><input type="radio" name="where" value="Інше"> Інше<br></label>
+                                            </div> 
+                                        </div>
+                                        <div class="form-element">
+                                            <span class="form-question">Який розділ сайту вам подобається більше?</span>
+                                            <div class="form-which">
+                                                <label><input type="checkbox" name="which" value="Настільні ігри"> Настільні ігри<br></label>
+                                                <label><input type="checkbox" name="which" value="Пазли"> Пазли<br></label>
+                                                <label><input type="checkbox" name="which" value="Серії ігор"> Серії ігор<br></label>
+                                                <label><input type="checkbox" name="which" value="Комікси та книги"> Комікси та книги<br></label>
+                                                <label><input type="checkbox" name="which" value="Аксесуари"> Аксесуари<br></label>
+                                            </div> 
+                                        </div>
+                                        <div class="form-element">
+                                            
+                                            <div class="form-result">
+                                                <textarea name="results" cols="60" rows="6"></textarea>
+                                            </div>
+                                            <div class="form-submit">
+                                                <button name="submit" type="button" onclick="processform()">Заповнити</button>
+                                                <button name="submit" type="submit">Відправити</button>
+                                                <button name="clear" type="button" onclick="clearform()">Очистити</button>
+                                            </div>
+                                        </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="catalog">
                     <div class="catalog_top__flex">
                         <div class="catalog_top catalog_top--left">
@@ -565,6 +622,10 @@
                                     BGS — Інтернет-магазин настільних ігор.<br>
                                     Всі права застережені.
                                 </div>
+                                <br>
+                                <div class="footer_catalog-item">
+                                    <button class="survey_form-button">Опитування</button>
+                                </div>
                             </div>
                         </div>
                         <div class="footer_col">
@@ -572,21 +633,21 @@
                                 <div class="footer_catalog">
                                     <div class="footer_catalog-title">Каталог</div>
                                     <ul class="footer_catalog-list catalog-list">
-                                        <a href="./index.html" class="footer_item_link">
-                                            <li class="footer_catalog-item">Настільні ігри</li>
-                                        </a>
-                                        <a href="#" class="footer_item_link" id="show-image">
-                                            <li class="footer_catalog-item">Пазли</li>
-                                        </a>
-                                        <a href="#" class="footer_item_link">
-                                            <li class="footer_catalog-item">Серії ігор</li>
-                                        </a>
-                                        <a href="#" class="footer_item_link">
-                                            <li class="footer_catalog-item">Комікси та книги</li>
-                                        </a>
-                                        <a href="#" class="footer_item_link">
-                                            <li class="footer_catalog-item">Аксесуари</li>
-                                        </a>
+                                        <li class="footer_item_link">
+                                            <a href="#" class="footer_catalog-item">Настільні ігри</a>
+                                        </li>
+                                        <li class="footer_item_link" id="show-image">
+                                            <a href="#" class="footer_catalog-item">Пазли</a>
+                                        </li>
+                                        <li class="footer_item_link">
+                                            <a href="#" class="footer_catalog-item">Серії ігор</a>
+                                        </li>
+                                        <li class="footer_item_link">
+                                            <a href="#" class="footer_catalog-item">Комікси та книги</a>
+                                        </li>
+                                        <li class="footer_item_link">
+                                            <a href="#" class="footer_catalog-item">Аксесуари</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -595,15 +656,21 @@
                             <div class="footer_col_wrap">
                                 <div class="footer_catalog-title">Контактна інформація</div>
                                 <ul class="footer_catalog-list">
-                                    <img src="../../Assets/assets_common/phone.png" alt="phone" class="footer_icon icon--phone">
-                                    <li class="footer_catalog-item">098 999-99-99</li>
-                                    <li class="footer_catalog-item">098 999-99-99</li>
-                                    <br>
-                                    
-                                    <li class="footer_catalog-item"><img src="../../Assets/assets_common/envelope.png" alt="email" class="footer_icon icon--email">store@bg.com.ua</li>
-                                    
-                                    <img src="../../Assets/assets_common/place.png" alt="location" class="footer_icon icon--location">
-                                    <li class="footer_catalog-item">Морська Прозорість вулиця, 7-А, 3-ий поверх, Київ</li>
+                                    <li class="footer_catalog-item">
+                                        <img src="../../Assets/assets_common/phone.png" alt="phone" class="footer_icon icon--phone">
+                                        098 999-99-99
+                                    </li>
+                                    <li class="footer_catalog-item">
+                                        098 999-99-99<br>
+                                    </li>
+                                    <li class="footer_catalog-item">
+                                        <img src="../../Assets/assets_common/envelope.png" alt="email" class="footer_icon icon--email">
+                                        store@bg.com.ua
+                                    </li>
+                                    <li class="footer_catalog-item">
+                                        <img src="../../Assets/assets_common/place.png" alt="location" class="footer_icon icon--location">
+                                        Морська Прозорість вулиця, 7-А, 3-ий поверх, Київ
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -618,8 +685,7 @@
 
     <script type="module" src="../../JavaScript/language.js"></script>
     <script type="module" src="../../JavaScript/languageLib.js"></script>
-
-    <script type="module" src="../../Style/123/sound.js"></script>
+    <script  src="../../JavaScript/survey-form.js"></script>
 </body>
 
 </html>

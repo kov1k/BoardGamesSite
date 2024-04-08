@@ -22,7 +22,10 @@ body {
     width: 100%;
     background-color: antiquewhite;
 }
-
+body._lock{
+    overflow: hidden;
+    
+}
 a {
     text-decoration: none;
     border: none;
@@ -700,27 +703,6 @@ input::-webkit-inner-spin-button {
 .catalog__item-flex:hover::before {
     border-color: black;
 }
-/* ================================== */
-        /* Изображение */
-        #fullscreen-overlay {
-            z-index: 100;
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 1); /* Полупрозрачный черный фон */
-            }
-            /* Размер изображения */
-            #fullscreen-image {
-            display: block;
-            margin: 0 auto;
-            width: 100%;
-            height: 100%;
-            }
-/* ^^^ Delete this ^^^ */
-
 /* ======= Footer ======= */
 .footer__container{
     padding: 30px 0 30px 0;
@@ -762,6 +744,9 @@ input::-webkit-inner-spin-button {
     columns: auto 2;
     gap: 5px;
 }
+.footer_item_link{
+    margin-bottom: 8px
+}
 .footer_catalog-item{
     color: var(--gray-text);
     margin-bottom: 8px;
@@ -773,4 +758,148 @@ input::-webkit-inner-spin-button {
     opacity: 0.6;
     translate: -24px;
    
+}
+.survey_form-button {
+    color: var(--orange);
+    font-size: 16px;
+    background: #efefef;
+    font-weight: bold;
+    padding: 4px;
+    border-radius: 4px;
+}
+.survey_form-button:hover {
+    color: var(--orange-dark);
+    background-color: var(--orange-active);
+}
+
+#surveyForm{
+    overflow: auto;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 472px;
+    height: 100px;
+    min-height: 80%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    transition: 0.5s;
+    border-radius: 6px;
+}
+.surveyForm_bg{
+    z-index: 1;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    transition: 0.3s;
+    width: 100%;
+    visibility: hidden;
+    height: 100%;
+}
+.surveyForm_bg.active {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+    visibility: visible;
+    transition: 0.3s;
+    opacity: 0.6;
+}
+.survey-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 15px;
+    gap: 15px;
+}
+.survey-title{
+    font-size: 24px;
+    border-bottom: 2px solid green;
+    padding-bottom: 5px;
+    cursor: default;
+    font-weight: bold;
+}
+.survey-main-container{
+    min-width: 397.9px;
+}
+.form-element {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0 0 11px;
+}
+.form-element:nth-child(1) label,
+.form-element:nth-child(2) label{
+    font-size: 24px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    font-weight: bold;
+}
+.form-element input[type='text'], input[type='email']{
+    height: 35px;
+    font-size: 20px;
+    border-radius: 8px;
+    padding-left: 8px;
+    border: 1px solid black;
+    transition: .3s;
+}
+.form-element input:focus{
+    outline: none;
+    transition: .3s;
+    border: 1px solid green;
+}
+.form-question{
+    font-size: 22px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid green;
+    font-weight: bold;
+}
+.form-rating{
+    display: flex;
+    justify-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    
+}
+
+.rating__item{
+    font-size: 44px;
+    cursor: pointer;
+    transition: .2s;
+    color: #dcdcdc;
+}
+.rating__item:hover,
+.rating__item:hover ~ .rating__item{
+    color: #bbbbbb;
+}
+.form-rating[data-total-value="1"] .rating__item:nth-child(n + 5),
+.form-rating[data-total-value="2"] .rating__item:nth-child(n + 4),
+.form-rating[data-total-value="3"] .rating__item:nth-child(n + 3),
+.form-rating[data-total-value="4"] .rating__item:nth-child(n + 2),
+.form-rating[data-total-value="5"] .rating__item:nth-child(n + 1){
+    color: gold;
+}
+.form-submit{
+    display: flex;
+    justify-content: space-between;
+}
+.form-submit button{
+    font-size: 16px;
+    width: 120px;
+    height: 25px;
+    color: white;
+    background: #1dbd25;
+    border-radius: 2px;
+}
+.form-submit button:first-child{
+    background: var(--orange);
+}
+.form-submit button:last-child{
+    background: #cc0101;
+}
+
+.form-result textarea{
+    resize: none;
 }
