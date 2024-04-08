@@ -105,7 +105,7 @@
                                         </div>
                                         <div class="form-element">
                                             <label for="email">Електронна пошта:</label>
-                                            <input type="email" name="email" id="email" required>
+                                            <input type="email" name="email" id="email" required autocomplete="email">
                                         </div>
                                         <div class="form-element">
                                             <span class="form-question">Наскільки ви оцінюєте дизайн сайту?</span>
@@ -129,11 +129,20 @@
                                         <div class="form-element">
                                             <span class="form-question">Який розділ сайту вам подобається більше?</span>
                                             <div class="form-which">
-                                                <label><input type="checkbox" name="which" value="Настільні ігри"> Настільні ігри<br></label>
-                                                <label><input type="checkbox" name="which" value="Пазли"> Пазли<br></label>
-                                                <label><input type="checkbox" name="which" value="Серії ігор"> Серії ігор<br></label>
-                                                <label><input type="checkbox" name="which" value="Комікси та книги"> Комікси та книги<br></label>
-                                                <label><input type="checkbox" name="which" value="Аксесуари"> Аксесуари<br></label>
+                                                <label for="boardGames">
+                                                    <input type="checkbox" name="which" id="boardGames" value="Настільні ігри"> Настільні ігри</label><br>
+                                                <label for="puzzles">
+                                                    <input type="checkbox" name="which" id="puzzles" value="Пазли"> Пазли</label><br>
+                                                <label for="gameSeries">
+                                                    <input type="checkbox" name="which" id="gameSeries" value="Серії ігор"> Серії ігор</label><br>
+                                                <label for="comicsBooks">
+                                                    <input type="checkbox" name="which" id="comicsBooks" value="Комікси та книги"> Комікси та книги</label><br>
+
+                                                <label for="accs">
+                                                    <input type="checkbox" name="which" id="accs" value="Аксесуари"> Аксесуари</label><br>
+                                                
+                                                
+                                                 
                                             </div> 
                                         </div>
                                         <div class="form-element">
@@ -253,7 +262,8 @@
                                                     </label>
                                                 </li>
                                                 <li class="filter_item">
-                                                    <label data-lang-key="preOrder" class="label">Передзамовлення
+                                                    <label class="label">
+                                                                <span data-lang-key="preOrd">Передзамовлення</span>
                                                                 <input type="checkbox">
                                                                 <span class="checkmark"></span>
                                                     </label>

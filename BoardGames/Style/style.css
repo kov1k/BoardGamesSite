@@ -780,8 +780,7 @@ input::-webkit-inner-spin-button {
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 472px;
-    height: 100px;
-    min-height: 80%;
+    max-height: 80%;
     background-color: #fff;
     border: 1px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -895,12 +894,33 @@ input::-webkit-inner-spin-button {
     color: white;
     background: #1dbd25;
     border-radius: 2px;
+    transition: .1s all;
+    box-shadow: 0px 1px 1px var(--gray-text);
 }
 .form-submit button:first-child{
     background: var(--orange);
 }
 .form-submit button:last-child{
     background: #cc0101;
+}
+.form-submit button:first-child:active{
+    background: var(--orange-active);
+}
+.form-submit button:hover{
+    transition: .1s all;
+    transform: translateY(-1px);
+    box-shadow: 0px 2px var(--gray-text);
+}
+.form-submit button:active{
+    background: #46d84d;
+}
+.form-submit button:last-child:active{
+    background: #d14040;
+}
+.form-submit button:active{
+    transition: .1s all;
+    transform: translateY(1px);
+    box-shadow: 0px 0.1px var(--gray-text);
 }
 
 .form-result textarea{

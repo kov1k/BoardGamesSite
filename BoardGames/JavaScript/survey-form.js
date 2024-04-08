@@ -80,7 +80,7 @@ function clearform() {
 }
 function sendform(){
     if (form1.checkValidity()) {
-        alert("Повідомлення успішно відправлено!");
+        alert("Повідомлення успішно відправлено!\nДякуємо за участь!");
         document.body.classList.toggle('_lock');
         const surveyForm_bg = document.querySelector('.surveyForm_bg');
         surveyForm_bg.classList.toggle('active');
@@ -88,5 +88,4 @@ function sendform(){
     } else {
         alert("Будь ласка, заповніть всі обов'язкові поля.");
     }
-    
 }
