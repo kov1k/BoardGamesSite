@@ -134,7 +134,8 @@ ul {
     font-size: 36px;
     font-weight: 600;
     font-style: italic;
-    text-shadow: 3px 2px 2px rgb(182, 182, 182);
+    text-shadow: -3px 0px 0px rgb(255, 105, 3);
+    color: #000;
 }
 
 .search_input {
@@ -183,6 +184,7 @@ ul {
 .logo_link img {
     width: 80px;
     height: 80px;
+    filter: drop-shadow(-2px 0px 0px var(--orange));
 }
 
 .basket__section img {

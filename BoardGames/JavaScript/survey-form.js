@@ -48,7 +48,7 @@ function processform(){
     result_str += "Ім'я: " + form1.fname.value + newline;
     result_str += "Електронна пошта: " + form1.email.value + newline;
 
-    result_str += "Оцінка дизайну сайту: " + selectedRatingValue + newline;
+    result_str += "Оцінка дизайну сайту: " + selectedRatingValue + '/5'+ newline;
     
     const whereOptions = document.querySelectorAll('input[name="where"]');
     let whereValue = "";

@@ -95,20 +95,20 @@
             <div class="main_wrapper">
                 <div id="surveyForm">
                     <div class="survey-container">
-                        <div class="survey-title">Опитування для відвідувачів сайту</div>
+                        <div class="survey-title" data-lang-key="surveyTitle">Опитування для відвідувачів сайту</div>
                         <div class="survey-main-container">
                             <div class="survey-main-content">
                                 <form name="form1" id="form1" action="mailto:survey@fakecorp.net">
                                         <div class="form-element">
-                                            <label for="fname">Ім'я:</label>
+                                            <label for="fname" data-lang-key="fName">Ім'я:</label>
                                             <input type="text" name="fname" id="fname" required>
                                         </div>
                                         <div class="form-element">
-                                            <label for="email">Електронна пошта:</label>
+                                            <label for="email" data-lang-key="email">Електронна пошта:</label>
                                             <input type="email" name="email" id="email" required autocomplete="email">
                                         </div>
                                         <div class="form-element">
-                                            <span class="form-question">Наскільки ви оцінюєте дизайн сайту?</span>
+                                            <span class="form-question" data-lang-key="siteDesignQ">Наскільки ви оцінюєте дизайн сайту?</span>
                                             <div class="form-rating" data-total-value="0">
                                                 <div class="rating__item" data-item-value="5">★</div>
                                                 <div class="rating__item" data-item-value="4">★</div>
@@ -118,31 +118,27 @@
                                             </div>
                                         </div>
                                         <div class="form-element">
-                                        <span class="form-question">Де ви дізналися про нас?</span>
+                                        <span class="form-question" data-lang-key="whereDYouQ">Де ви дізналися про нас?</span>
                                             <div class="form-where">
-                                                <label><input type="radio" name="where" value="Пошук у браузері" checked="checked"> Пошук у браузері<br></label>
-                                                <label><input type="radio" name="where" value="Реклама"> Реклама<br></label>
-                                                <label><input type="radio" name="where" value="Розповіли знайомі/друзі/родичі"> Розповіли знайомі/друзі/родичі<br></label>
-                                                <label><input type="radio" name="where" value="Інше"> Інше<br></label>
+                                                <label><input type="radio" name="where" value="Пошук у браузері" data-lang-key="whereDYouQ_browser"> Пошук у браузері<br></label>
+                                                <label><input type="radio" name="where" value="Реклама" data-lang-key="whereDYouQ_advert"> Реклама<br></label>
+                                                <label><input type="radio" name="where" value="Розповіли знайомі/друзі/родичі" data-lang-key="whereDYouQ_relatives"> Розповіли знайомі/друзі/родичі<br></label>
+                                                <label><input type="radio" name="where" value="Інше" data-lang-key="whereDYouQ_other"> Інше<br></label>
                                             </div> 
                                         </div>
                                         <div class="form-element">
-                                            <span class="form-question">Який розділ сайту вам подобається більше?</span>
+                                            <span class="form-question" data-lang-key="whichSectionQ">Який розділ сайту вам подобається більше?</span>
                                             <div class="form-which">
                                                 <label for="boardGames">
-                                                    <input type="checkbox" name="which" id="boardGames" value="Настільні ігри"> Настільні ігри</label><br>
+                                                    <input type="checkbox" name="which" id="boardGames" value="Настільні ігри" data-lang-key="whichSectionQ_boardG"> Настільні ігри</label><br>
                                                 <label for="puzzles">
-                                                    <input type="checkbox" name="which" id="puzzles" value="Пазли"> Пазли</label><br>
+                                                    <input type="checkbox" name="which" id="puzzles" value="Пазли" data-lang-key="whichSectionQ_puzz"> Пазли</label><br>
                                                 <label for="gameSeries">
-                                                    <input type="checkbox" name="which" id="gameSeries" value="Серії ігор"> Серії ігор</label><br>
+                                                    <input type="checkbox" name="which" id="gameSeries" value="Серії ігор" data-lang-key="whichSectionQ_gameS"> Серії ігор</label><br>
                                                 <label for="comicsBooks">
-                                                    <input type="checkbox" name="which" id="comicsBooks" value="Комікси та книги"> Комікси та книги</label><br>
-
+                                                    <input type="checkbox" name="which" id="comicsBooks" value="Комікси та книги" data-lang-key="whichSectionQ_comics"> Комікси та книги</label><br>
                                                 <label for="accs">
-                                                    <input type="checkbox" name="which" id="accs" value="Аксесуари"> Аксесуари</label><br>
-                                                
-                                                
-                                                 
+                                                    <input type="checkbox" name="which" id="accs" value="Аксесуари" data-lang-key="whichSectionQ_accs"> Аксесуари</label><br>
                                             </div> 
                                         </div>
                                         <div class="form-element">
@@ -151,9 +147,9 @@
                                                 <textarea name="results" cols="60" rows="6"></textarea>
                                             </div>
                                             <div class="form-submit">
-                                                <button name="submit" type="button" onclick="processform()">Заповнити</button>
-                                                <button name="submit" type="submit" onclick="sendform()">Відправити</button>
-                                                <button name="clear" type="button" onclick="clearform()">Очистити</button>
+                                                <button name="submit" type="button" onclick="processform()" data-lang-key="fillUp">Заповнити</button>
+                                                <button name="submit" type="submit" onclick="sendform()" data-lang-key="sendForm">Відправити</button>
+                                                <button name="clear" type="button" onclick="clearform()" data-lang-key="clearForm">Очистити</button>
                                             </div>
                                         </div>
 
@@ -629,34 +625,34 @@
                                 </div>
                                 <div class="footer_copyright">
                                     © 2024<br>
-                                    BGS — Інтернет-магазин настільних ігор.<br>
-                                    Всі права застережені.
+                                    <div data-lang-key="copyright">BGS — Інтернет-магазин настільних ігор.<br></div>
+                                    <div data-lang-key="rights">Всі права застережені.</div>
                                 </div>
                                 <br>
                                 <div class="footer_catalog-item">
-                                    <button class="survey_form-button">Опитування</button>
+                                    <button class="survey_form-button" data-lang-key="survey">Опитування</button>
                                 </div>
                             </div>
                         </div>
                         <div class="footer_col">
                             <div class="footer_col_wrap">
                                 <div class="footer_catalog">
-                                    <div class="footer_catalog-title">Каталог</div>
+                                    <div class="footer_catalog-title" data-lang-key="catalog">Каталог</div>
                                     <ul class="footer_catalog-list catalog-list">
                                         <li class="footer_item_link">
-                                            <a href="#" class="footer_catalog-item">Настільні ігри</a>
+                                            <a href="#" class="footer_catalog-item" data-lang-key="boardG">Настільні ігри</a>
                                         </li>
                                         <li class="footer_item_link" id="show-image">
-                                            <a href="#" class="footer_catalog-item">Пазли</a>
+                                            <a href="#" class="footer_catalog-item" data-lang-key="puzzles">Пазли</a>
                                         </li>
                                         <li class="footer_item_link">
-                                            <a href="#" class="footer_catalog-item">Серії ігор</a>
+                                            <a href="#" class="footer_catalog-item" data-lang-key="gameSeries">Серії ігор</a>
                                         </li>
                                         <li class="footer_item_link">
-                                            <a href="#" class="footer_catalog-item">Комікси та книги</a>
+                                            <a href="#" class="footer_catalog-item" data-lang-key="comicsBooks">Комікси та книги</a>
                                         </li>
                                         <li class="footer_item_link">
-                                            <a href="#" class="footer_catalog-item">Аксесуари</a>
+                                            <a href="#" class="footer_catalog-item" data-lang-key="accs">Аксесуари</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -664,7 +660,7 @@
                         </div>
                         <div class="footer_col">
                             <div class="footer_col_wrap">
-                                <div class="footer_catalog-title">Контактна інформація</div>
+                                <div class="footer_catalog-title" data-lang-key="contactInfo">Контактна інформація</div>
                                 <ul class="footer_catalog-list">
                                     <li class="footer_catalog-item">
                                         <img src="../../Assets/assets_common/phone.png" alt="phone" class="footer_icon icon--phone">
@@ -679,7 +675,7 @@
                                     </li>
                                     <li class="footer_catalog-item">
                                         <img src="../../Assets/assets_common/place.png" alt="location" class="footer_icon icon--location">
-                                        Морська Прозорість вулиця, 7-А, 3-ий поверх, Київ
+                                        <div data-lang-key="place">Морська Прозорість вулиця, 7-А, 3-ий поверх, Київ</div>
                                     </li>
                                 </ul>
                             </div>
